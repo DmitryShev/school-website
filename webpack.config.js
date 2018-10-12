@@ -124,7 +124,7 @@ module.exports = (releaseStage) => {
 
   rules.push({
     test: /\.(eot|svg|ttf|otf|woff|woff2)$/,
-    include: join(__dirname, 'src/assets/fonts'),
+    /*include: join(__dirname, 'src/assets/fonts'),*/
     loader: 'file-loader',
     options: {
       name: isDevelopment ? 'fonts/[name].[ext]' : 'fonts/[name]-[hash].[ext]'
@@ -133,7 +133,7 @@ module.exports = (releaseStage) => {
 
   rules.push({
     test: /\.(jpe?g|png|gif|svg)$/,
-    include: join(__dirname, 'src/assets/img'),
+    // include: join(__dirname, 'src/assets/img'),
     loader: 'file-loader',
     options: {
       name: isDevelopment ? 'images/[name].[ext]' : 'images/[name]-[hash:8].[ext]'

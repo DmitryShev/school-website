@@ -4,23 +4,24 @@ import { Router, Route, Switch } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
 
 import { Header } from '../components/Header';
-import { Root } from '../components/Root';
-import { Footer } from '../components/Footer';
-
-import { QuestionsContainer } from '../containers/Questions';
+import { Carousel } from '../components/Carousel';
+import { About } from '../components/About';
 
 
 const Container = styled.div`
-  display: flex;
-  color: white;  
-  overflow: hidden;
-  position: relative;
 
-  ${({ lang }) => (lang === 'en'
-    ? css`background-image: radial-gradient(circle at 74% 50%, #64729c, #222a41);`
-    : css`background-image: radial-gradient(circle at 50% 74%, #64729c, #222a41);`)
-}
+background-color: #fcf8ee;
 `;
+//   display: flex;
+//   color: white;  
+//   overflow: hidden;
+//   position: relative;
+
+//   ${({ lang }) => (lang === 'en'
+//     ? css`background-image: radial-gradient(circle at 74% 50%, #64729c, #222a41);`
+//     : css`background-image: radial-gradient(circle at 50% 74%, #64729c, #222a41);`)
+// }
+
 
 const Wrap = styled.div`
   display: flex;
@@ -40,7 +41,9 @@ const Wrap = styled.div`
 const history = createHistory();
 
 export const MainContainer = () => (
-  <div>
-  <p>Hello!</p>
-  </div>
+  <Container>
+    <Header />
+    <About />
+    <Carousel />
+  </Container>
 );
