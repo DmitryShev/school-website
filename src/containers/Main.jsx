@@ -6,14 +6,19 @@ import createHistory from 'history/createBrowserHistory';
 import { Header } from '../components/Header';
 import { Carousel } from '../components/Carousel';
 import { About } from '../components/About';
+import { Services } from '../components/Services';
+import { Team } from '../components/Team';
+import { Footer } from '../components/Footer';
 
 
 const Container = styled.div`
+//scroll-behavior: smooth;
+background-color: #221111;
 
-background-color: #fcf8ee;
+//#fcf8ee
 `;
 //   display: flex;
-//   color: white;  
+//   color: white;
 //   overflow: hidden;
 //   position: relative;
 
@@ -45,5 +50,8 @@ export const MainContainer = () => (
     <Header />
     <About />
     <Carousel />
+    <Services />
+    <Team />
+    <Footer />
   </Container>
 );

@@ -1,9 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import SalsaLogo from '../assets/img/SalsaLogo.jpg';
+
 const Container = styled.div`
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  top: 0;
+  background-color: #000;
   height: 100px;
-  color: black;
+  color: #fff;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
@@ -13,7 +20,6 @@ const Container = styled.div`
   font-size: 1.2rem;
   letter-spacing: .175em;
   text-transform: uppercase;
-  border-bottom: 1px solid black;
 `;
 
 const Menu = styled.ul`
@@ -34,7 +40,6 @@ const Logo = styled.div`
     width: 100%;
     height: 100%;
     border-radius: 100px; /* Радиус скругления */
-    border: 1px solid green; /* Параметры рамки */
   }
 `;
 
@@ -45,12 +50,11 @@ export const Header = () => (
       <Item>Тренера</Item>
       <Item>Расписание</Item>
     </Menu>
-    <Logo ><img src="http://dekorokna.by/img/sotr/6.png" alt="Logo" /></Logo>
+    <Logo ><img src={SalsaLogo} alt="Logo" /></Logo>
     <Menu>
       <Item>Залы</Item>
       <Item>Новости</Item>
       <Item>Контакты</Item>
     </Menu>
-    
   </Container>
 );

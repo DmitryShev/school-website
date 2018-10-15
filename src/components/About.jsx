@@ -8,17 +8,17 @@ const Container = styled.div`
   align-items: center;
   align-content: center;
   height: 100px;
+  margin-top: 100px;
+  background-color: #ffff00; //#ffff00;
+
 `;
 
 const Header = styled.h1`
-  color: white;
-  background-color: black;
+  color: #000;
   text-align: center;
   text-transform: uppercase;
   min-height: 60px;
-  border-bottom: 1px solid black;
-  width: 100%
-  opacity: .9;
+  width: 100%;
   padding: 10px;
 `;
 

@@ -12,6 +12,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   align-content: center;
+  //background-color: #664422;
 `;
 
 const Photo = styled.div`
@@ -19,7 +20,6 @@ const Photo = styled.div`
   img {
     width: 100%;
     height: 100%;
-
   }
 `;
 
@@ -33,7 +33,6 @@ const SliderWrap = styled(Slider)`
   justify-content: center;
   align-items: center;
   align-content: center;
-  
 
   button {
     width: 40px;
@@ -44,7 +43,20 @@ const SliderWrap = styled(Slider)`
   button:before {
     font-size: 40px;
     color: black;
+    color: #ffff00;
   }
+
+`;
+
+const PagingButton = styled.div`
+  background-color: #ffff00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+
 `;
 
 const settings = {
@@ -58,6 +70,7 @@ const settings = {
   autoplaySpeed: 5000,
   pauseOnHover: true,
   speed: 1000,
+  customPaging: i => <PagingButton><button>{i + 1}</button></PagingButton>
 };
 
 export const Carousel = () => (
@@ -65,25 +78,25 @@ export const Carousel = () => (
   
   <SliderWrap {...settings}>
     <Photo>
-      <img src='https://www.imgacademy.com/themes/custom/imgacademy/images/helpbox-contact.png'/>
+      <img src='https://pp.userapi.com/c638930/v638930295/2f03/mVH7_fbuJfc.jpg'/>
     </Photo>
     <Photo>
-      <img src='https://html.com/wp-content/uploads/flamingo.jpg' />
+      <img src='https://pp.userapi.com/c638930/v638930295/2ec7/1MoY4wCPMGA.jpg' />
     </Photo>
     <Photo>
-      <img src='https://prod.media.wapa.pe/670x376/wapa/imagen/2017/01/23/Nota-15441-zumba_para_ninos.jpg'/>
-    </Photo>
-    <Photo>
-
-      <img src='https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2017/02/23/14878455050932.jpg'/>
+      <img src='https://pp.userapi.com/c638930/v638930295/2bd0/YSFcDM8u2hg.jpg'/>
     </Photo>
     <Photo>
 
-      <img src='https://www.imgacademy.com/themes/custom/imgacademy/images/helpbox-contact.png'/>
+      <img src='https://pp.userapi.com/c638930/v638930295/2b1c/1G4V86pQpQU.jpg'/>
     </Photo>
     <Photo>
 
-      <img src='https://www.imgacademy.com/themes/custom/imgacademy/images/helpbox-contact.png'/>
+      <img src='https://pp.userapi.com/c637522/v637522295/f657/jobTjsy5tNU.jpg'/>
+    </Photo>
+    <Photo>
+
+      <img src='https://pp.userapi.com/c636917/v636917295/2dee8/MpHsvNqHgNc.jpg'/>
     </Photo>
   </SliderWrap>
   </Container>
