@@ -19,7 +19,7 @@ const Product = styled.div`
 `;
 
 const Header = styled.h1`
-  background-color: #cc1122; //#e6212b;
+  background-color: #cc1122; //#e6212b; //#990000
   margin: 20px 0;
   text-align: center;
   height: 80px;

@@ -12,11 +12,13 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   align-content: center;
-  //background-color: #664422;
+  //background-color: #85E858;
 `;
 
 const Photo = styled.div`
+  
   height: 550px;
+
   img {
     width: 100%;
     height: 100%;
@@ -25,9 +27,11 @@ const Photo = styled.div`
 
 const SliderWrap = styled(Slider)`
   height: 90%;
-  width: 90%;
+  //width: 90%;
   padding: 40px;
-  margin: 0 auto;
+  //margin: 0 auto;
+  max-width: 1024px;
+
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
@@ -43,13 +47,15 @@ const SliderWrap = styled(Slider)`
   button:before {
     font-size: 40px;
     color: black;
-    color: #ffff00;
+    color: #f6c200;
   }
-
 `;
 
+
+
+
 const PagingButton = styled.div`
-  background-color: #ffff00;
+  background-color: #c24c00;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,13 +75,13 @@ const settings = {
   autoplay: true,
   autoplaySpeed: 5000,
   pauseOnHover: true,
+  centerPadding: '100px',
   speed: 1000,
   customPaging: i => <PagingButton><button>{i + 1}</button></PagingButton>
 };
 
 export const Carousel = () => (
   <Container>
-  
   <SliderWrap {...settings}>
     <Photo>
       <img src='https://pp.userapi.com/c638930/v638930295/2f03/mVH7_fbuJfc.jpg'/>

@@ -12,15 +12,19 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   margin: 10px;
+  color: #fff;
+  //background-image: radial-gradient(circle, #ffff00, #eca521, #b05d34, #5b2c2b, #000000);
 `;
 
 const ImgContainer = styled.div`
   width: 200px;
   height: 200px;
+  
   img {
     border-radius: 100px;
     width: 100%;
     height: 100%;
+    box-shadow: 0 0 0 1px #990000, 0 0 70px #ffff00;
   }
 `;
 

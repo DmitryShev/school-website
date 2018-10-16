@@ -5,19 +5,19 @@ import { trainers } from './helpers/trainers';
 import { MemberCard } from './MemberCard';
 
 const Container = styled.div`
-  background-color: #eeeeee;
+  background-color: #c17a28;//#eeeeee;
   
-  
+  // #ddbb11, #c17a28, #8b472f, #492424, #000000);
 `;
 
 const Header = styled.h1`
   text-align: center;
-  color: #221111;
-  background-color: #ee9999;
+  color: #fff;
+  background-color: #492424;
   height: 80px;
-
+  margin: 20px 0;
   display: flex;
-  
+
   justify-content: center;
   align-items: center;
 `;

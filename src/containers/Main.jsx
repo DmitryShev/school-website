@@ -12,8 +12,8 @@ import { Footer } from '../components/Footer';
 
 
 const Container = styled.div`
-//scroll-behavior: smooth;
-background-color: #221111;
+
+  background-color: #221111;
 
 //#fcf8ee
 `;
