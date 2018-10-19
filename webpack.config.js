@@ -150,6 +150,15 @@ module.exports = (releaseStage) => {
   });
 
   rules.push({
+    test: /\.(mp4|webm)$/,
+    //include: join(__dirname, 'src/assets/videos'),
+    loader: 'file-loader',
+    options: {
+      name: isDevelopment ? 'videos/[name].[ext]' : 'videos/[name]-[hash].[ext]'
+    }
+  });
+
+  rules.push({
     test: /\.css$/,
     loaders: [
       MiniCssExtractPlugin.loader,

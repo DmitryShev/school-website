@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
@@ -51,9 +51,6 @@ const SliderWrap = styled(Slider)`
   }
 `;
 
-
-
-
 const PagingButton = styled.div`
   background-color: #c24c00;
   display: flex;
@@ -82,28 +79,28 @@ const settings = {
 
 export const Carousel = () => (
   <Container>
-  <SliderWrap {...settings}>
-    <Photo>
-      <img src='https://pp.userapi.com/c638930/v638930295/2f03/mVH7_fbuJfc.jpg'/>
-    </Photo>
-    <Photo>
-      <img src='https://pp.userapi.com/c638930/v638930295/2ec7/1MoY4wCPMGA.jpg' />
-    </Photo>
-    <Photo>
-      <img src='https://pp.userapi.com/c638930/v638930295/2bd0/YSFcDM8u2hg.jpg'/>
-    </Photo>
-    <Photo>
+    <SliderWrap {...settings}>
+      <Photo>
+        <img src="https://pp.userapi.com/c638930/v638930295/2f03/mVH7_fbuJfc.jpg" alt="img" />
+      </Photo>
+      <Photo>
+        <img src="https://pp.userapi.com/c638930/v638930295/2ec7/1MoY4wCPMGA.jpg" alt="img" />
+      </Photo>
+      <Photo>
+        <img src="https://pp.userapi.com/c638930/v638930295/2bd0/YSFcDM8u2hg.jpg" alt="img" />
+      </Photo>
+      <Photo>
 
-      <img src='https://pp.userapi.com/c638930/v638930295/2b1c/1G4V86pQpQU.jpg'/>
-    </Photo>
-    <Photo>
+        <img src="https://pp.userapi.com/c638930/v638930295/2b1c/1G4V86pQpQU.jpg" alt="img" />
+      </Photo>
+      <Photo>
 
-      <img src='https://pp.userapi.com/c637522/v637522295/f657/jobTjsy5tNU.jpg'/>
-    </Photo>
-    <Photo>
+        <img src="https://pp.userapi.com/c637522/v637522295/f657/jobTjsy5tNU.jpg" alt="img" />
+      </Photo>
+      <Photo>
 
-      <img src='https://pp.userapi.com/c636917/v636917295/2dee8/MpHsvNqHgNc.jpg'/>
-    </Photo>
-  </SliderWrap>
+        <img src="https://pp.userapi.com/c636917/v636917295/2dee8/MpHsvNqHgNc.jpg" alt="img" />
+      </Photo>
+    </SliderWrap>
   </Container>
 );
