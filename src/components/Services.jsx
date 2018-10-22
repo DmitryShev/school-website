@@ -1,41 +1,36 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { products } from './helpers/products';
-import { ProductCard } from './ProductCard';
+import { ProductCarousel } from './elements/ProductCarousel';
 
 const Container = styled.div`
-  
-`;
-
-const Product = styled.div`
   display: flex;
+
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  align-content: space-around;
-  background-color: #ddbb11;
-  
+  align-content: center;
+
+  background-color: #F9F4E8;
+  height: 600px;
+
 `;
 
 const Header = styled.h1`
-  background-color: #cc1122; //#e6212b; //#990000
-  margin: 20px 0;
-  text-align: center;
-  height: 80px;
-  color: #fff;
-
-  display: flex;
-  
-  justify-content: center;
-  align-items: center;
+  width: 200px;
+  height: 200px;
+  margin 40px;
 `;
 
 export const Services = () => (
   <Container>
-    <Header>Our Products</Header>
-    <Product>
-      {products.map(item => <ProductCard text={item.text} img={item.img} key={item.id} />)}
-    </Product>
+    <Header>Открой для себя мир Salsa!</Header>
+    <ProductCarousel />
   </Container>
 );
+
+
+/*
+  Открой для себя мир Salsa!
+  {products.map(item => <ProductCard text={item.text} img={item.img} key={item.id} />)}
+*/

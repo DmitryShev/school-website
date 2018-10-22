@@ -34,7 +34,6 @@ const Members = styled.div`
 
 export const Team = () => (
   <Container>
-    <Header>Our Team</Header>
     <Members>
       {trainers.map(item => (
         <MemberCard

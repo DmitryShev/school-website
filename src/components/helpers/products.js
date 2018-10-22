@@ -27,7 +27,7 @@ export const products = [
   {
     id: 5,
     img: 'https://cdn2.trend.az/media/pictures/2015/04/06/proflaftika_tv_kanal_060415.jpg',
-    text: 'Salsa NY'
+    text: 'Lady Style'
   },
   {
     id: 6,
