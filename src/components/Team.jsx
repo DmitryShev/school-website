@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { trainers } from './helpers/trainers';
-import { MemberCard } from './MemberCard';
+import { MemberCard } from './elements/MemberCard';
 
 const Container = styled.div`
   background-color: #c17a28;//#eeeeee;

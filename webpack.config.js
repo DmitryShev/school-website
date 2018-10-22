@@ -11,7 +11,7 @@ const webpack = require('webpack');
 const { browserslist, version } = require('./package.json');
 
 /*---------------------------------------
-# Utilities
+# Utilities http://thenewcode.com/assets/videos/polina.mp4
 ---------------------------------------*/
 
 function createBabelOptions({ hot = false, optimize = false, react = false } = {}) {
