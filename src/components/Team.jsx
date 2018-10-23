@@ -5,22 +5,11 @@ import { trainers } from './helpers/trainers';
 import { MemberCard } from './elements/MemberCard';
 
 const Container = styled.div`
-  background-color: #c17a28;//#eeeeee;
+  background-color: #c17a28;//#c17a28;//#eeeeee;
   
   // #ddbb11, #c17a28, #8b472f, #492424, #000000);
 `;
 
-const Header = styled.h1`
-  text-align: center;
-  color: #fff;
-  background-color: #492424;
-  height: 80px;
-  margin: 20px 0;
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
-`;
 
 const Members = styled.div`
   display: flex;

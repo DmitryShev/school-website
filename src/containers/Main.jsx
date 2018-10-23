@@ -4,9 +4,8 @@ import { Router, Route, Switch } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
 
 import { Header } from '../components/Header';
-import { Carousel } from '../components/Carousel';
-import { About } from '../components/About';
-import { AboutTeam } from '../components/AboutTeam';
+import { HeaderAbout } from '../components/HeaderAbout';
+import { HeaderTeam } from '../components/HeaderTeam';
 import { Services } from '../components/Services';
 import { Team } from '../components/Team';
 import { Footer } from '../components/Footer';
@@ -50,14 +49,11 @@ export class MainContainer extends Component {
     return (
       <Container >
         <Header scrollTop={scrollTop} />
-        {/*<Carousel />*/}
         <VideoPresentation />
-
-        <About slogan={slogan} />
+        <HeaderAbout slogan={slogan} />
         <Services />
-        <AboutTeam text={ourTeam} />
+        <HeaderTeam text={ourTeam} />
         <Team />
-        
         <Footer />
       </Container>
     );
