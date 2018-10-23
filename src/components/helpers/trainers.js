@@ -1,32 +1,76 @@
 export const trainers = [
   {
     id: 0,
-    name: 'Marcos Fernandes',
-    description: 'te best of the best, lorem ru 10 hahasdhad',
-    img: 'https://www.quanzhanketang.com/css/pineapple.jpg'
+    name: 'Marcos Fernandez',
+    description: `Маркос Фернандес (Marcos Fernandez) Имеет огромный опыт преподавания – более 13 лет! 
+    Выпускник Национальной школы музыкальных представлений (Escuela Nacional de Espectaculos Musicales) 
+    в Гаване, Куба, по специальности «Танцовщик и хореограф». Карьера: - Участник труппы «Театро Америка» 
+    (Teatro América) В качестве участника «Театро Америка» принимал участие в Фестивале латиноамериканской 
+    культуры (Festival de cultura latinoamericana) в Италии (2005 год), в спектаклях Парижской комической оперы 
+    (Opéra-Comique), а также в выступлениях коллектива в рамках тура с Испанию (Канарские острова) - Компания «Havana Dance Stars» 
+    Будучи танцором компании «Havana Dance Stars», Маркос Фернандес был в одном из составов знаменитого мюзикла «Havana Nights» , 
+    базирующегося на наиболее ярких моментах истории Кубы и кубинской культуры. Первое представление «Havana Nights» состоялось в 
+    1998 году на Кубе. Затем спектакль демонстрировался в 17-ти странах мира. - Артистическое агентство «Clave Cubana» — спектакль 
+    «Fiesta del Caribe». - Кабаре «Havana Café del Hotel Melia Cohiba» (в отеле «Cohiba»). - Новосибирск — танцовщик в клубе «Havana Club» 
+    (2007 – 2008) В настоящее время Маркос продолжает артистическую деятельность в качестве танцора и музыканта и преподает в школе 
+    «Salsa Cubana» (с 2008 года) и в городах России и Ближнего Зарубежьучаствовал во Втором, Третьем и Четвертом, Пятом Сибирском 
+    Сальса-Фестивале, а также “”Hot Salsa Festival в городе Красноярск (в 2009 – 2014 гг.);в 2010 году входил в преподавательский 
+    состав таких известных в России сальса-фестивалях, как «Freetyle Salsa Fest 2010» (Санкт-Петербург) и Третьем Краснодарском 
+    сальса-фестивале (апрель 2011 г);преподавал в Первом в России Сальса-Лагере на берегу Красноярского моря летом 2009 года;вёл 
+    курс семинаров в Москве в январе 2009 года, в марте 2010 года и апреле 2011 года;проводил мастер-классы и семинары по сальсе, 
+    ча-ча-ча, румбе, афро-кубано, сону и бачате в городах России по приглашению местных сальса-клубов и активистов: в Красноярске 
+    (по приглашению сальса-клуба “Arriba!”), в Томске, Барнауле, Кемерово, Новокузнецке, Омске,Челябинске, Самаре, Санкт-Петербурге, 
+    Перми, Йошкар-Оле, Нижнем Новгороде, Тольятти, Саратове, Краснодаре, Павлодаре, Воронеже, Иркутске;входил в состав жюри конкурса 
+    по сальсе и хастлу «Танцевальные страсти» в июле 2009 и 2010 года в городе Красноярске;с 2010 года - постоянный преподаватель 
+    летних и зимних тренировочных лагерей танцоров спортивно-бальных танцев по сальсе, кубинской румбе, бачате и афро-кубано`,
+    img: 'https://pp.userapi.com/c834103/v834103712/12d680/6Y8ziiNl7R0.jpg?ava=1'
   },
   {
     id: 1,
-    name: 'Elisaveta Rigondy',
-    description: 'te best of the best, lorem ru 10 hahasdhad',
-    img: 'https://www.quanzhanketang.com/css/pineapple.jpg'
+    name: 'Елизавета Ригондю',
+    description: 'Тренер по сальсе!',
+    img: 'https://pp.userapi.com/c9863/u4374390/-6/x_1c806c6c.jpg'
   },
   {
     id: 2,
-    name: 'Dmitry Shevelev Igorevisch',
-    description: 'te best of the best, lorem ru 10 hahasdhad',
-    img: 'https://www.quanzhanketang.com/css/pineapple.jpg'
+    name: 'Берани Ригондю',
+    description: 'te best of fffdfthe best, lorem ru 102 hahasdhad',
+    img: 'https://pp.userapi.com/c848524/v848524306/946bd/ZmvGLtZmIK8.jpg'
   },
   {
     id: 3,
-    name: 'Marcos',
-    description: 'te best of the best, lorem ru 10 hahasdhad',
-    img: 'https://www.quanzhanketang.com/css/pineapple.jpg'
+    name: 'Мария Старостина',
+    description: 'te best of the best, lorem ru 102 hahasdhad',
+    img: 'https://pp.userapi.com/c836431/v836431121/4ae4d/X_zFlGkcB10.jpg'
   },
   {
     id: 4,
-    name: 'Marcos',
-    description: 'te best of the best, lorem ru 10 hahasdhad',
-    img: 'https://www.quanzhanketang.com/css/pineapple.jpg'
+    name: 'Денис Абраменков',
+    description: 'te best22 of fathe best, loreasdm ru 10 33hahasdhad',
+    img: 'https://pp.userapi.com/c636726/v636726424/4c608/h8sIeU66bg4.jpg'
+  },
+  {
+    id: 5,
+    name: 'Марина Молчанова',
+    description: 'te best of the best, lordddem ru 101 hahasdh62ad',
+    img: 'https://pp.userapi.com/c847021/v847021640/d1bd5/OdlKWMKmCCM.jpg'
+  },
+  {
+    id: 6,
+    name: 'Влад Сабенин',
+    description: 'te best of the best, loddasdrem ru 101 hahasdhad',
+    img: 'https://pp.userapi.com/c834202/v834202433/ddd83/qugwl3D1vFk.jpg'
+  },
+  {
+    id: 7,
+    name: 'Наталья Карпова',
+    description: 'teasdd be234st of the best, lorem ru 101 hahaasdhad',
+    img: 'https://pp.userapi.com/c841124/v841124917/7d1b5/Uy8mQON2FRo.jpg'
+  },
+  {
+    id: 8,
+    name: 'Кристина Лучко',
+    description: 'te best of the best, lorem ru 101 hahddsasdhffad',
+    img: 'https://pp.userapi.com/c845218/v845218570/e8823/jUCpWLXI85A.jpg'
   }
 ];

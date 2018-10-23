@@ -35,9 +35,9 @@ export class MainContainer extends Component {
   handleScroll = () => {
     const { scrollTop } = this.state;
     const { scrollY } = window;
-    if (scrollY <= 0 && !scrollTop) {
+    if (scrollY <= 50 && !scrollTop) {
       this.setState({ scrollTop: true });
-    } else if (scrollY > 0 && scrollTop !== false) {
+    } else if (scrollY > 50 && scrollTop !== false) {
       this.setState({ scrollTop: false });
     }
   }

@@ -24,7 +24,7 @@ const Header = styled.h1`
 
 export const Services = () => (
   <Container>
-    <Header>Открой для себя мир Salsa!</Header>
+    <Header>Открой для себя мир Salsa Вместе с Salsa Cubana Novosibirsk!</Header>
     <ProductCarousel />
   </Container>
 );
