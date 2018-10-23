@@ -2,9 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import DG from '2gis-maps';
 
+import { MapCard } from './elements/MapCard';
+
 
 const Container = styled.div`
-  height: 800px;
+  //height: 700px;
   width: 100%;
   color: #fff;
   background-color: #000;
@@ -16,22 +18,12 @@ const Container = styled.div`
   align-content: center;
 `;
 
-const Info = styled.div`
-  height: 400px;
-  width: 400px;
+const Contacts = styled.div`
+  margin: 0 40px;
 `;
 
-const MapWrap = styled.div`
-  margin: 40px;
-  height: 300px;
-  width: 600px;
-`;
+const MapsContainer = styled.div`
 
-
-const MapContainer = styled.div`
-  width: 100%; 
-  height: 100%
-  margin: 10px;
 `;
 
 export class Footer extends React.Component {
@@ -50,19 +42,28 @@ export class Footer extends React.Component {
       'center': [55.0348, 82.9118],
       'zoom': 16
     });
-    //DG.marker([55.0348, 82.9118]).addTo(map).bindPopup('Я попап!');
+    DG.marker([55.0348, 82.9118]).addTo(secondMap).bindPopup('Я попап!');
   }
 
   render() {
+    const id = 'map';
+    const secondId = 'second-map';
+    const address = 'our address is .....';
     return (
       <Container>
-        <Info>
-          <p>blablabla lorem</p>
-        </Info>
-        <MapWrap>
-          <MapContainer id="map" />
-          <MapContainer id="second-map" />
-        </MapWrap>
+        <Contacts>
+          <h1>Контакты</h1>
+          <p>Телефон для связи: 8(913) 000 00 00</p>
+          <p>E-mail: hello@cuba.ru</p>
+          <h1>Мы в социальных сетях</h1>
+          <p>Вконтакте</p>
+          <p>Телеграмм</p>
+          <p>Твиттер</p>
+        </Contacts>
+        <MapsContainer>
+          <MapCard id={id} address={address} />
+          <MapCard id={secondId} address={address} />
+        </MapsContainer>
       </Container>
     );
   }
