@@ -20,6 +20,7 @@ const Container = styled.div`
     margin: 0 -40px;
     z-index: 10;
   }
+
   button:before {
     font-size: 60px;
     color: #000;
@@ -50,9 +51,9 @@ const settings = {
 export const ProductCarousel = () => (
   <Container>
     <Slider {...settings}>
-      {
-        products.map(item => <ProductCard text={item.text} img={item.img} key={item.id} />)
-      }
+      {products.map(item =>
+        <ProductCard text={item.text} img={item.img} key={item.id} description={item.description} video={item.video} />
+      )}
     </Slider>
   </Container>
 );
