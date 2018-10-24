@@ -66,7 +66,7 @@ export class ProductCard extends React.Component {
   }
 
   render() {
-    console.log(this.state);
+    //console.log(this.state);
     const { img, text, description, video } = this.props;
     return (
       <Container>

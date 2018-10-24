@@ -123,11 +123,11 @@ module.exports = (releaseStage) => {
   });
 
   rules.push({
-    test: /\.(eot|svg|ttf|otf|woff|woff2)$/,
-    /*include: join(__dirname, 'src/assets/fonts'),*/
+    test: /\.(svg)$/,
+    include: join(__dirname, 'src/assets/img'),
     loader: 'file-loader',
     options: {
-      name: isDevelopment ? 'fonts/[name].[ext]' : 'fonts/[name]-[hash].[ext]'
+      name: isDevelopment ? 'svg/[name].[ext]' : 'svg/[name]-[hash:8].[ext]'
     }
   });
 
@@ -141,11 +141,11 @@ module.exports = (releaseStage) => {
   });
 
   rules.push({
-    test: /\.pdf$/,
-    include: join(__dirname, 'src/assets/docs'),
+    test: /\.(eot|svg|ttf|otf|woff|woff2)$/,
+    /*include: join(__dirname, 'src/assets/fonts'),*/
     loader: 'file-loader',
     options: {
-      name: isDevelopment ? 'docs/[name].[ext]' : 'docs/[name]-[hash].[ext]'
+      name: isDevelopment ? 'fonts/[name].[ext]' : 'fonts/[name]-[hash].[ext]'
     }
   });
 

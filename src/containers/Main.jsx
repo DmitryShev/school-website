@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 import { Router, Route, Switch } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
 
-import { Header } from '../components/Header';
+import { MenuBar } from '../components/MenuBar';
 import { HeaderAbout } from '../components/HeaderAbout';
 import { HeaderTeam } from '../components/HeaderTeam';
 import { Services } from '../components/Services';
@@ -45,10 +45,10 @@ export class MainContainer extends Component {
   render() {
     const { scrollTop } = this.state;
     const { slogan, schoolName, ourTeam } = Texts;
-    // console.log(scrollPosition, 'scroll');
+    console.log(window);
     return (
       <Container >
-        <Header scrollTop={scrollTop} />
+        <MenuBar scrollTop={scrollTop} />
         <VideoPresentation />
         <HeaderAbout slogan={slogan} />
         <Services />
