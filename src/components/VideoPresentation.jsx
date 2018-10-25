@@ -1,10 +1,10 @@
 import React from 'react';
-// import { string } from 'prop-types';
 import styled from 'styled-components';
 
 import Img from '../assets/img/Cheer-Up.jpg';
 import Mp4 from '../assets/videos/video-bg.mp4';
 import Webm from '../assets/videos/Cheer.webm';
+import { large, medium } from './helpers/deviceSizes';
 
 const Container = styled.div`
   height: 80vh;  //610px;
@@ -44,17 +44,15 @@ const About = styled.div`
   text-align: center;
   height: 460px;
   width: 250px;
-  
-  
+
   right: 20px;
   top: 140px;
-  //bottom: 80px;
 
   padding: 10px;
   background-color:rgba(0, 0, 0, 0.7);
   bottom: 60px;
 
-  font-family: SourceSansProRegular, GESSTwoLight;
+  font-family: SourceSansProRegular; //GESSTwoLight, SourceSansProRegular, FiraSans, SourceSansProBold, SourceSansProLight; // SourceSansProRegular, GESSTwoLight; 
   h1 {
     font-size: 30px;
     font-weight: bold;
@@ -100,7 +98,3 @@ export const VideoPresentation = () => (
     </About>
   </Container>
 );
-
-// VideoPresentation.propTypes = {
-//   slogan: string.isRequired
-// };

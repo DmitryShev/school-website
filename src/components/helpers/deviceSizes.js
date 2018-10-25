@@ -1,5 +1,5 @@
-export const Sizes = {
-  small: 365,
-  medium: 768,
-  large: 1024
-};
+export const small = '365px';
+
+export const medium = '768px';
+
+export const large = '1024px';

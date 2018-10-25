@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import SalsaLogo from '../assets/img/SalsaLogo.jpg';
 import { SmallMenuIcon } from './helpers/svgs';
+import { large, medium } from './helpers/deviceSizes';
 
 const Container = styled.div`
   position: fixed;
@@ -11,36 +12,62 @@ const Container = styled.div`
   width: 100%;
   top: 0;
 
-  height: ${({ top }) => (top ? '120px' : '30px')};
-  background-color: ${({ top }) => (top ? '#000' : '#fff')};
-  color: ${({ top }) => (top ? '#fff' : '#000')};
-  opacity: ${({ top }) => (top ? '1' : '.7')};
-  transition: 0.5s;
-
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
   align-content: center;
   justify-content: space-between;
 
+  height: ${({ top }) => (top ? '120px' : '30px')};
+  background-color: ${({ top }) => (top ? '#000' : '#fff')};
+ 
+  opacity: ${({ top }) => (top ? '1' : '.8')};
+  transition: 0.5s;
+
   font-family: SourceSansProRegular, sans-serif;
-  font-size: ${({ top }) => (top ? '1.2rem' : '.9rem')};
+  font-size: ${({ top }) => (top ? '1.2rem' : '1rem')};
   letter-spacing: .2em;
   text-transform: uppercase;
   font-weight: bold;
 
-  @media (max-width: 768px) {
+  a {
+    text-decoration: none;
+    color: ${({ top }) => (top ? '#fff' : '#000')};
+    padding: 3px;
+    :hover {
+      background-color: #000;
+      color: #fff;
+      border-radius: 5px;
+    }
+  }
+
+  @media (max-width: ${medium}) {
     font-size: .8rem;
-    height: ${({ top }) => (top ? '120px' : '30px')};
-    //border: 1px solid #fff;
     justify-content: ${({ top }) => (top ? 'center' : 'flex-end')};
+  }
+
+  @media (max-width: ${large}) {
+    font-size: .7rem;
+  }
+
+  @media (max-width: 1100px) {
+    font-size: .8rem;
   }
 `;
 
 const Menu = styled.ul`
   width: 500px;
   text-align: center;
-  @media (max-width: 768px) { 
+
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+
+  @media (max-width: ${medium}) {
+    flex-direction: column;
+    align-items: flex-end;
     text-align: right;
     display: ${({ top }) => (top || 'none')};
   }
@@ -49,24 +76,33 @@ const Menu = styled.ul`
 const MenuLeft = styled.ul`
   width: 500px;
   text-align: center;
-  @media (max-width: 768px) { 
-    text-align: left;
+
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+
+  @media (max-width: ${medium}) {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: right;
     display: ${({ top }) => (top || 'none')};
   }
 `;
 
-const Item = styled.li`
-  display: inline-block;
-  margin: 20px;
 
+const Item = styled.li`
+  margin: 20px;
+  list-style-type: none;
+  
   :hover {
     opacity: .5;
     cursor: pointer;
   }
 
-  @media (max-width: 768px) { 
-    margin: 10px 5px;
-    display: block;
+  @media (max-width: ${medium}) { 
+    margin: 7px 5px;
   }
 `;
 
@@ -80,38 +116,37 @@ const Logo = styled.div`
     height: 100%;
     border-radius: 100px;
   }
-
-  @media (max-width: 768px) {
-    
-    // width: 80px;
-    // height: 80px;
-  }
 `;
 
 export const MenuButton = styled.div`
   display: none;
-  color: black;
+  color: #000;
   opacity: 1;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${medium}) {
     display: ${({ top }) => (top ? 'none' : 'flex')};
     margin: 0 10px;
   }
+
+  // @media (max-width: ${large}) {
+  //   display: ${({ top }) => (top ? 'none' : 'flex')};
+  //   margin: 0 10px;
+  // }
 `;
 
 
 export const MenuBar = ({ scrollTop }) => (
   <Container top={scrollTop}>
     <Menu top={scrollTop}>
-      <Item>Залы</Item>
-      <Item>Тренера</Item>
-      <Item>Расписание</Item>
+      <Item><a href="#">Залы</a></Item>
+      <Item><a href="#">Тренера</a></Item>
+      <Item><a href="#">Расписание</a></Item>
     </Menu>
     {scrollTop && <Logo><img src={SalsaLogo} alt="Logo" /></Logo>}
     <MenuLeft top={scrollTop}>
-      <Item>События</Item>
-      <Item>Контакты</Item>
-      <Item>Фестивали</Item>
+      <Item><a href="#">События</a></Item>
+      <Item><a href="#footer">Контакты</a></Item>
+      <Item><a href="#">Фестивали</a></Item>
     </MenuLeft>
 
     <MenuButton top={scrollTop}>

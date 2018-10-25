@@ -50,7 +50,7 @@ export class Footer extends React.Component {
     const secondId = 'second-map';
     const address = 'our address is .....';
     return (
-      <Container>
+      <Container id="footer">
         <Contacts>
           <h1>Контакты</h1>
           <p>Телефон для связи: 8(913) 000 00 00</p>
