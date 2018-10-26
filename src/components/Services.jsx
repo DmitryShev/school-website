@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { large, medium } from './helpers/deviceSizes';
 import { ProductCarousel } from './elements/ProductCarousel';
 
 const Container = styled.div`
@@ -14,6 +15,9 @@ const Container = styled.div`
   background-color: #F9F4E8;
   height: 800px;
 
+  @media (max-width: ${medium}) {
+    flex-direction: column;
+  }
 `;
 
 const Header = styled.h1`
