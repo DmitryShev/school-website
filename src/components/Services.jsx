@@ -12,7 +12,7 @@ const Container = styled.div`
   align-content: center;
 
   background-color: #F9F4E8;
-  height: 600px;
+  height: 800px;
 
 `;
 
@@ -28,9 +28,3 @@ export const Services = () => (
     <ProductCarousel />
   </Container>
 );
-
-
-/*
-  Открой для себя мир Salsa!
-  {products.map(item => <ProductCard text={item.text} img={item.img} key={item.id} />)}
-*/

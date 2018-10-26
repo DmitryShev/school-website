@@ -10,7 +10,7 @@ import { Services } from '../components/Services';
 import { Team } from '../components/Team';
 import { Footer } from '../components/Footer';
 import { VideoPresentation } from '../components/VideoPresentation';
-import { Texts } from '../components/helpers/uiTexts';
+import { Texts, Marcos } from '../components/helpers/uiTexts';
 
 
 const Container = styled.div`
@@ -35,9 +35,9 @@ export class MainContainer extends Component {
   handleScroll = () => {
     const { scrollTop } = this.state;
     const { scrollY } = window;
-    if (scrollY <= 50 && !scrollTop) {
+    if (scrollY <= 30 && !scrollTop) {
       this.setState({ scrollTop: true });
-    } else if (scrollY > 50 && scrollTop !== false) {
+    } else if (scrollY > 30 && scrollTop !== false) {
       this.setState({ scrollTop: false });
     }
   }
@@ -45,11 +45,10 @@ export class MainContainer extends Component {
   render() {
     const { scrollTop } = this.state;
     const { slogan, schoolName, ourTeam } = Texts;
-    console.log(window);
     return (
       <Container >
         <MenuBar scrollTop={scrollTop} />
-        <VideoPresentation />
+        <VideoPresentation {...Marcos} />
         <HeaderAbout slogan={slogan} />
         <Services />
         <HeaderTeam text={ourTeam} />

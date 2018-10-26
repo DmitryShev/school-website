@@ -20,7 +20,6 @@ const Container = styled.div`
 
   height: ${({ top }) => (top ? '120px' : '30px')};
   background-color: ${({ top }) => (top ? '#000' : '#fff')};
- 
   opacity: ${({ top }) => (top ? '1' : '.8')};
   transition: 0.5s;
 
@@ -34,11 +33,15 @@ const Container = styled.div`
     text-decoration: none;
     color: ${({ top }) => (top ? '#fff' : '#000')};
     padding: 3px;
+    :visited {
+      color: ${({ top }) => (top ? '#fff' : '#000')};
+    }
     :hover {
       background-color: #000;
       color: #fff;
       border-radius: 5px;
     }
+    
   }
 
   @media (max-width: ${medium}) {
