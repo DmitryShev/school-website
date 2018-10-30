@@ -21,7 +21,7 @@ const Container = styled.div`
   height: ${({ top }) => (top ? '120px' : '30px')};
   background-color: ${({ top }) => (top ? '#000' : '#fff')};
   opacity: ${({ top }) => (top ? '1' : '.8')};
-  transition: 0.5s;
+  transition: 0.3s;
 
   font-family: SourceSansProRegular, sans-serif;
   font-size: ${({ top }) => (top ? '1.2rem' : '1rem')};
