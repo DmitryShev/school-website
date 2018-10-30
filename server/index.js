@@ -9,5 +9,6 @@ app.get('/', (req, res) => (
   res.sendFile(path.join(__dirname, '../www/index.html'))
 ));
 
-app.listen();
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`App at ${PORT}`));
 
