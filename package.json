@@ -7,7 +7,10 @@
   "license": "Proprietary",
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server --progress --colors"
+    "start": "webpack-dev-server --progress --colors --mode development",
+    "test": "jest",
+    "build:dev": "NODE_ENV=production webpack --env dev --progress --colors",
+    "build:prod": "NODE_ENV=production webpack --env production --progress --colors"
   },
   "browserslist": [
     "last 1 Chrome major versions",
