@@ -11,6 +11,7 @@
     "test": "jest",
     "build:dev": "NODE_ENV=production webpack --env dev --progress --colors",
     "build:prod": "NODE_ENV=production webpack --env production --progress --colors",
+    "heroku-prebuild": "echo This runs before Heroku installs your dependencies.",
     "start": "NODE_ENV=production webpack --env production --progress --colors && node ./server/index.js"
   },
   "browserslist": [
