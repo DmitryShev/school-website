@@ -24,7 +24,8 @@ const Container = styled.div`
 const Header = styled.h1`
   width: 200px;
   height: 200px;
-  margin 40px;
+  margin: 40px;
+  text-align: center;
 `;
 
 export const Services = () => (

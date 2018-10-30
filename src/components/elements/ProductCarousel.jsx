@@ -12,8 +12,8 @@ import { medium, large, small } from '../helpers/deviceSizes';
 
 
 const Container = styled.div`
-  position: relative;
-  width: 880px;
+  //position: relative;
+  width: 50vw;
   margin: 70px;
 
   button {
@@ -27,6 +27,10 @@ const Container = styled.div`
     font-size: 60px;
     color: #000;
     opacity: 1;
+  }
+
+  @media (max-width: ${medium}) {
+    width: 60vw;
   }
 `;
 
@@ -45,8 +49,8 @@ export const ProductCarousel = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     customPaging: i => <PagingButton><button>{i + 1}</button></PagingButton>
   };
 

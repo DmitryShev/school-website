@@ -21,15 +21,19 @@ const history = createHistory();
 
 export class MainContainer extends Component {
   state = {
-    scrollTop: true
+    scrollTop: true,
+    height: '',
+    width: ''
   }
 
   componentDidMount = () => {
     window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('resize', this.handleWindowSize);
   }
 
   componentWillUnmount = () => {
     window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('resize', this.handleWindowSize);
   }
 
   handleScroll = () => {
@@ -42,11 +46,25 @@ export class MainContainer extends Component {
     }
   }
 
+  handleWindowSize = () => {
+    const { height, width } = this.state;
+    this.setState({
+      height: window.innerHeight,
+      width: window.innerWidth
+    });
+    console.log('height', height);
+    console.log('width', width);
+  }
+
   render() {
     const { scrollTop } = this.state;
     const { slogan, schoolName, ourTeam } = Texts;
     return (
       <Container >
+        <h3>
+          Window width: {this.state.width} and height: {this.state.height}
+        </h3>
+        
         <MenuBar scrollTop={scrollTop} />
         <VideoPresentation {...Marcos} />
         <HeaderAbout slogan={slogan} />
