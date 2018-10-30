@@ -9,5 +9,5 @@ app.get('/', (req, res) => (
   res.sendFile(path.join(__dirname, '../www/index.html'))
 ));
 
-app.listen(8080);
+app.listen();
 
