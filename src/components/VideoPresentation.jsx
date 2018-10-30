@@ -2,11 +2,10 @@ import React from 'react';
 import { string } from 'prop-types';
 import styled from 'styled-components';
 
-import Img from '../assets/img/Cheer-Up.jpg';
 import Mp4 from '../assets/videos/video-bg.mp4';
 import Webm from '../assets/videos/Cheer.webm';
 import MarcImg from '../assets/img/marcos.jpg';
-import { large, medium } from './helpers/deviceSizes';
+import { medium } from './helpers/deviceSizes';
 
 const Container = styled.div`
   //height: 80vh;  // 610px;
@@ -21,7 +20,6 @@ const Container = styled.div`
 `;
 
 const VideoContainer = styled.div`
-  // background: url(${Img}) no-repeat #000;
   background-color: #000;
   background-size: cover;
   position: relative;

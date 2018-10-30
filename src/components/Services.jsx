@@ -3,11 +3,12 @@ import styled from 'styled-components';
 
 import { large, medium } from './helpers/deviceSizes';
 import { ProductCarousel } from './elements/ProductCarousel';
+import SalsaLogoBlack from '../assets/img/SalsaLogoBlack.svg';
 
 const Container = styled.div`
   display: flex;
 
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
   align-content: center;
@@ -28,7 +29,10 @@ const Header = styled.h1`
 
 export const Services = () => (
   <Container>
-    <Header>Открой для себя мир Salsa Вместе с Salsa Cubana Novosibirsk!</Header>
+    <Header>
+      Открой для себя мир Salsa Вместе с
+      <img src={SalsaLogoBlack} alt="logo" />
+    </Header>
     <ProductCarousel />
   </Container>
 );

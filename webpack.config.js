@@ -122,18 +122,13 @@ module.exports = (releaseStage) => {
     ]
   });
 
-  rules.push({
-    test: /\.(svg)$/,
-    include: join(__dirname, 'src/assets/img'),
-    loader: 'file-loader',
-    options: {
-      name: isDevelopment ? 'svg/[name].[ext]' : 'svg/[name]-[hash:8].[ext]'
-    }
-  });
 
   rules.push({
     test: /\.(jpe?g|png|gif|svg)$/,
-    // include: join(__dirname, 'src/assets/img'),
+    include: [
+      join(__dirname, 'src/assets/img'),
+      join(__dirname, 'node_modules/slick-carousel/slick')
+    ],
     loader: 'file-loader',
     options: {
       name: isDevelopment ? 'images/[name].[ext]' : 'images/[name]-[hash:8].[ext]'
@@ -142,7 +137,10 @@ module.exports = (releaseStage) => {
 
   rules.push({
     test: /\.(eot|svg|ttf|otf|woff|woff2)$/,
-    /*include: join(__dirname, 'src/assets/fonts'),*/
+    include: [
+      join(__dirname, 'src/assets/fonts'),
+      join(__dirname, 'node_modules/slick-carousel/slick/fonts')
+    ],
     loader: 'file-loader',
     options: {
       name: isDevelopment ? 'fonts/[name].[ext]' : 'fonts/[name]-[hash].[ext]'

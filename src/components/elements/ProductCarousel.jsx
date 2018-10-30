@@ -8,6 +8,7 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import { products } from '../helpers/products';
 import { ProductCard } from './ProductCard';
+import { medium, large, small } from '../helpers/deviceSizes';
 
 
 const Container = styled.div`
@@ -39,22 +40,24 @@ const PagingButton = styled.div`
   height: 20px;
 `;
 
-const settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 4,
-  slidesToScroll: 4,
-  customPaging: i => <PagingButton><button>{i + 1}</button></PagingButton>
+export const ProductCarousel = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    customPaging: i => <PagingButton><button>{i + 1}</button></PagingButton>
+  };
+
+  return (
+    <Container>
+      <Slider {...settings}>
+        {products.map(item =>
+          <ProductCard text={item.text} img={item.img} key={item.id} description={item.description} video={item.video} />
+        )}
+      </Slider>
+    </Container>
+  );
 };
 
-
-export const ProductCarousel = () => (
-  <Container>
-    <Slider {...settings}>
-      {products.map(item =>
-        <ProductCard text={item.text} img={item.img} key={item.id} description={item.description} video={item.video} />
-      )}
-    </Slider>
-  </Container>
-);

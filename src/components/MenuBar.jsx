@@ -3,7 +3,7 @@ import { bool } from 'prop-types';
 import styled from 'styled-components';
 
 import SalsaLogo from '../assets/img/SalsaLogo.jpg';
-import { SmallMenuIcon } from './helpers/svgs';
+import SmallMenuIcon from '../assets/img/menu.svg';
 import { large, medium } from './helpers/deviceSizes';
 
 const Container = styled.div`
@@ -130,11 +130,6 @@ export const MenuButton = styled.div`
     display: ${({ top }) => (top ? 'none' : 'flex')};
     margin: 0 10px;
   }
-
-  // @media (max-width: ${large}) {
-  //   display: ${({ top }) => (top ? 'none' : 'flex')};
-  //   margin: 0 10px;
-  // }
 `;
 
 
@@ -153,7 +148,7 @@ export const MenuBar = ({ scrollTop }) => (
     </MenuLeft>
 
     <MenuButton top={scrollTop}>
-      <SmallMenuIcon />
+      <img src={SmallMenuIcon} alt="Menu" />
     </MenuButton>
   </Container>
 );
