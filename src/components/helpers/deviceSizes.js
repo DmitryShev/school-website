@@ -1,4 +1,4 @@
-export const small = '365px';
+export const small = '320px';
 
 export const medium = '768px';
 

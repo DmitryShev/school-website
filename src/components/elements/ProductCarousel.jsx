@@ -1,4 +1,5 @@
 import React from 'react';
+import { number } from 'prop-types';
 import Slider from 'react-slick';
 import styled from 'styled-components';
 
@@ -44,13 +45,13 @@ const PagingButton = styled.div`
   height: 20px;
 `;
 
-export const ProductCarousel = () => {
+export const ProductCarousel = ({ carousel }) => {
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToShow: carousel,
+    slidesToScroll: carousel,
     customPaging: i => <PagingButton><button>{i + 1}</button></PagingButton>
   };
 
@@ -65,3 +66,6 @@ export const ProductCarousel = () => {
   );
 };
 
+ProductCarousel.propTypes = {
+  carousel: number.isRequired
+};

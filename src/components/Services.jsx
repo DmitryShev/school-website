@@ -1,4 +1,6 @@
 import React from 'react';
+import { number } from 'prop-types';
+
 import styled from 'styled-components';
 
 import { large, medium } from './helpers/deviceSizes';
@@ -28,12 +30,16 @@ const Header = styled.h1`
   text-align: center;
 `;
 
-export const Services = () => (
+export const Services = ({ carousel }) => (
   <Container>
     <Header>
       Открой для себя мир Salsa Вместе с
       <img src={SalsaLogoBlack} alt="logo" />
     </Header>
-    <ProductCarousel />
+    <ProductCarousel carousel={carousel} />
   </Container>
 );
+
+Services.propTypes = {
+  carousel: number.isRequired
+};
