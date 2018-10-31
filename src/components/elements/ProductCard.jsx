@@ -5,8 +5,8 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   width: 218px;
-  height: 350px;
-  margin: 0px;
+  height: 280px;
+  margin: auto;
   cursor: pointer;
   color: #fff;
   :hover {

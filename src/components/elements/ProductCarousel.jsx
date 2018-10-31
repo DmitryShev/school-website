@@ -6,7 +6,6 @@ import styled from 'styled-components';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-
 import { products } from '../helpers/products';
 import { ProductCard } from './ProductCard';
 import { medium, large, small } from '../helpers/deviceSizes';
@@ -32,6 +31,7 @@ const Container = styled.div`
 
   @media (max-width: ${medium}) {
     width: 60vw;
+    margin-top: 20px;
   }
 `;
 
