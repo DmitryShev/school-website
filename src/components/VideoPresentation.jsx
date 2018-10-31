@@ -3,7 +3,6 @@ import { string } from 'prop-types';
 import styled from 'styled-components';
 
 import Mp4 from '../assets/videos/video-bg.mp4';
-import Webm from '../assets/videos/Cheer.webm';
 import MarcImg from '../assets/img/marcos.jpg';
 import { medium } from './helpers/deviceSizes';
 
@@ -113,7 +112,6 @@ export const VideoPresentation = ({ schoolName, text, name }) => (
 
       <Video autoPlay loop preload="auto" muted>
         <source src={Mp4} type="video/mp4" />
-        <source src={Webm} type="video/webm" />
       </Video>
 
       <About>
