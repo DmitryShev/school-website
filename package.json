@@ -11,10 +11,11 @@
     "yarn": "1.10.1"
   },
   "scripts": {
-    "express": "webpack-dev-server --progress --colors",
+    "start": "webpack-dev-server --progress --colors",
     "build:dev": "NODE_ENV=production webpack --env dev --progress --colors",
     "build:prod": "NODE_ENV=production webpack --env production --progress --colors",
-    "start": "NODE_ENV=production webpack --env production"
+    "console": "NODE_ENV=production webpack --env production",
+    "express": "node ./server/index.js"
   },
   "browserslist": [
     "last 1 Chrome major versions",
