@@ -2,6 +2,7 @@ import React from 'react';
 import { string } from 'prop-types';
 import ReactModal from 'react-modal';
 import styled from 'styled-components';
+import { medium, large, small } from '../helpers/deviceSizes';
 
 const Container = styled.div`
   width: 218px;
@@ -11,6 +12,10 @@ const Container = styled.div`
   color: #fff;
   :hover {
     opacity: 0.8;
+  }
+
+  @media (max-width: ${small}) {
+    width: 180px;
   }
 `;
 
@@ -38,12 +43,11 @@ const Title = styled.h1`
   font-weight: bold;
   letter-spacing: .065em;
   height: 60px;
-
+  text-align: center;
 `;
 
 const Description = styled.p`
   background-color: #cc1122;
-
 `;
 
 export class ProductCard extends React.Component {

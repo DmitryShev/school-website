@@ -2,6 +2,8 @@ import React from 'react';
 import { string } from 'prop-types';
 import styled from 'styled-components';
 
+import { medium, large, small } from '../helpers/deviceSizes';
+
 const Container = styled.div`
   width: 400px;
   //height: 500px;
@@ -19,9 +21,15 @@ const Container = styled.div`
 
   p {
     padding: 5px;
+    
   }
 
   transition: 0.5s;
+
+  @media (max-width: ${medium}) {
+    margin: 5px;
+    width: auto;
+  }
 `;
 
 const ImgContainer = styled.div`

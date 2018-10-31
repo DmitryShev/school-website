@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { trainers } from './helpers/trainers';
 import { MemberCard } from './elements/MemberCard';
 import { SelectedTeamCard } from './elements/SelectedTeamCard';
+import { large, medium } from './helpers/deviceSizes';
 
 const Container = styled.div`
   background-color: #eeeeee;//#c17a28;//#eeeeee;
@@ -16,6 +17,12 @@ const Container = styled.div`
   padding: 20px;
   
   // #ddbb11, #c17a28, #8b472f, #492424, #000000);
+
+  @media (max-width: ${medium}) {
+    flex-direction: column;
+
+    
+  }
 `;
 
 const MemberContainer = styled.div`
@@ -30,6 +37,12 @@ const Members = styled.div`
   align-content: center;
   color: #221111;
   justify-content: flex-start;
+
+
+  @media (max-width: ${medium}) {
+    flex-direction: row;
+    justify-content: center;
+  }
 
 `;
 

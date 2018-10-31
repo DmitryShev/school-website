@@ -2,6 +2,8 @@ import React from 'react';
 import { string, func } from 'prop-types';
 import styled from 'styled-components';
 
+import { medium, large, small } from '../helpers/deviceSizes';
+
 
 const Container = styled.div`
   width: 220px;
@@ -40,6 +42,13 @@ const Container = styled.div`
     box-shadow: inset 1px 1px 10px -1px;
     border: 2px solid #000;
   }
+
+  @media (max-width: ${medium}) {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    ${Title}
+  }
 `;
 
 const ImgContainer = styled.div`
@@ -60,6 +69,11 @@ const Title = styled.h3`
   //margin: 10px;
   text-align: center;
   height: 9%;
+
+  @media (max-width: ${medium}) {
+    display: none;
+  }
+  
 `;
 
 export const MemberCard = ({ name, img, onClick }) => (
