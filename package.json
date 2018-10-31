@@ -12,11 +12,11 @@
     "npm": "6.4.1"
   },
   "scripts": {
-    "start": "webpack-dev-server --progress --colors",
+    "express": "webpack-dev-server --progress --colors",
     "build:dev": "NODE_ENV=production webpack --env dev --progress --colors",
     "build:prod": "NODE_ENV=production webpack --env production --progress --colors",
     "console": "NODE_ENV=production webpack --env production",
-    "express": "node ./server/index.js"
+    "start": "NODE_ENV=production webpack --env production --progress --colors && node ./server/index.js"
   },
   "browserslist": [
     "last 1 Chrome major versions",
