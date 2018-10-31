@@ -30,14 +30,13 @@ const Header = styled.h1`
   height: 320px;
   margin: 40px;
   text-align: center;
-  
 
   p {
 
   }
 
   @media (max-width: ${medium}) {
-    margin: 20px;
+    margin: 20px 20px 10px 20px;
   }
 `;
 

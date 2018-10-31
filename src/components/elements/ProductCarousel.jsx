@@ -31,7 +31,7 @@ const Container = styled.div`
 
   @media (max-width: ${medium}) {
     width: 60vw;
-    margin-top: 20px;
+    margin-top: 10px;
   }
 `;
 
