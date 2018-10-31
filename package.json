@@ -6,6 +6,9 @@
   "author": "D",
   "license": "Proprietary",
   "private": true,
+  "engines": {
+    "node": "10.11.0"
+  },
   "scripts": {
     "express": "webpack-dev-server --progress --colors",
     "test": "jest",
