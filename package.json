@@ -7,14 +7,15 @@
   "license": "Proprietary",
   "private": true,
   "engines": {
-    "node": "10.11.0"
+    "node": "10.11.0",
+    "yarn": "1.10.1"
   },
   "scripts": {
     "express": "webpack-dev-server --progress --colors",
     "test": "jest",
     "build:dev": "NODE_ENV=production webpack --env dev --progress --colors",
     "build:prod": "NODE_ENV=production webpack --env production --progress --colors",
-    "start": "node ./server/index.js"
+    "start": "NODE_ENV=production webpack --env production --progress --colors & node ./server/index.js"
   },
   "browserslist": [
     "last 1 Chrome major versions",
