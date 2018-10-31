@@ -14,7 +14,7 @@
     "express": "webpack-dev-server --progress --colors",
     "build:dev": "NODE_ENV=production webpack --env dev --progress --colors",
     "build:prod": "NODE_ENV=production webpack --env production --progress --colors",
-    "start": "webpack --env production && node ./server/index.js"
+    "start": "NODE_ENV=production webpack --env production && node ./server/index.js"
   },
   "browserslist": [
     "last 1 Chrome major versions",
