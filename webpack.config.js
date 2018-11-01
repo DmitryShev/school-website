@@ -1,6 +1,6 @@
 const { join } = require('path');
 
-// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const cssnano = require('cssnano');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -252,7 +252,7 @@ module.exports = (releaseStage) => {
     new ScriptExtHtmlWebpackPlugin({
       defaultAttribute: 'defer'
     }),
-    // new BundleAnalyzerPlugin()
+    new BundleAnalyzerPlugin()
   );
 
   if (isDevelopment) {
