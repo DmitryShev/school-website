@@ -2,6 +2,8 @@ import React from 'react';
 import { string } from 'prop-types';
 import styled from 'styled-components';
 
+import { medium } from '../helpers/deviceSizes';
+
 const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -18,6 +20,11 @@ const Address = styled.div`
 const MapContainer = styled.div`
   width: 600px;
   height: 300px;
+
+  @media (max-width: ${medium}) {
+    width: 30vh;
+    height: 300px;
+  }
 `;
 
 export const MapCard = ({ address, id }) => (

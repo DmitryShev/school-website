@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import DG from '2gis-maps';
 
 import { MapCard } from './elements/MapCard';
+import { Contacts as contArr } from './helpers/uiTexts';
+import { medium } from './helpers/deviceSizes';
 
 
 const Container = styled.div`
@@ -23,7 +25,9 @@ const Contacts = styled.div`
 `;
 
 const MapsContainer = styled.div`
-
+  @media (max-width: ${medium}) {
+    //width: auto;
+  }
 `;
 
 export class Footer extends React.Component {
