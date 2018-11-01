@@ -1,7 +1,7 @@
 import React from 'react';
 import { string } from 'prop-types';
 import styled from 'styled-components';
-import { large, medium } from './helpers/deviceSizes';
+import { medium } from './helpers/deviceSizes';
 
 const Container = styled.div`
   display: flex;
