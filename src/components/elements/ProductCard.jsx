@@ -19,6 +19,8 @@ const Container = styled.div`
   }
 `;
 
+
+
 const ImgContainer = styled.div`
   height: 180px;
     img {
