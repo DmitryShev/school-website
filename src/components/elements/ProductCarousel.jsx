@@ -8,7 +8,7 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import { products } from '../helpers/products';
 import { ProductCard } from './ProductCard';
-import { medium, large, small } from '../helpers/deviceSizes';
+import { medium } from '../helpers/deviceSizes';
 
 
 const Container = styled.div`
@@ -58,8 +58,14 @@ export const ProductCarousel = ({ carousel }) => {
   return (
     <Container>
       <Slider {...settings}>
-        {products.map(item =>
-          <ProductCard text={item.text} img={item.img} key={item.id} description={item.description} video={item.video} />
+        {products.map(item => (
+          <ProductCard
+            text={item.text}
+            img={item.img}
+            key={item.id}
+            description={item.description}
+            video={item.video}
+          />)
         )}
       </Slider>
     </Container>

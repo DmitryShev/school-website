@@ -2,7 +2,7 @@ import React from 'react';
 import { string, func } from 'prop-types';
 import styled from 'styled-components';
 
-import { medium, large, small } from '../helpers/deviceSizes';
+import { medium } from '../helpers/deviceSizes';
 
 
 const Container = styled.div`

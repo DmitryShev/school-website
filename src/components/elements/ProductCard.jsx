@@ -2,7 +2,7 @@ import React from 'react';
 import { string } from 'prop-types';
 import ReactModal from 'react-modal';
 import styled from 'styled-components';
-import { medium, large, small } from '../helpers/deviceSizes';
+import { small } from '../helpers/deviceSizes';
 
 const Container = styled.div`
   width: 218px;
@@ -70,7 +70,6 @@ export class ProductCard extends React.Component {
   }
 
   render() {
-    //console.log(this.state);
     const { img, text, description, video } = this.props;
     return (
       <Container>
@@ -79,16 +78,12 @@ export class ProductCard extends React.Component {
         </ImgContainer>
         <Title onClick={this.handleOpenModal}>{text}</Title>
 
-        
-          <ReactModal isOpen={this.state.showModal} style={{
-            overlay: {
-              zIndex: '100'
-            } }}>
+          <ReactModal isOpen={this.state.showModal} style={{ overlay: { zIndex: '100'} }}>
             <Description>{description}</Description>
             <div>{video}</div>
             <button onClick={this.handleCloseModal}>Close Modal</button>
           </ReactModal>
-        
+
       </Container>
     );
   }

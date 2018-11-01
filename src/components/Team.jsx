@@ -4,40 +4,33 @@ import styled from 'styled-components';
 import { trainers } from './helpers/trainers';
 import { MemberCard } from './elements/MemberCard';
 import { SelectedTeamCard } from './elements/SelectedTeamCard';
-import { large, medium } from './helpers/deviceSizes';
+import { medium } from './helpers/deviceSizes';
 
 const Container = styled.div`
-  background-color: #eeeeee;//#c17a28;//#eeeeee;
+  background-color: #eeeeee;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  //align-items: center;
   align-content: center;
   padding: 20px;
-  
-  // #ddbb11, #c17a28, #8b472f, #492424, #000000);
 
   @media (max-width: ${medium}) {
     flex-direction: column;
-
-    
   }
 `;
 
 const MemberContainer = styled.div`
-  
+
 `;
 
 const Members = styled.div`
   display: flex;
   flex-wrap: wrap;
-  //justify-content: space-between;
   align-items: center;
   align-content: center;
   color: #221111;
   justify-content: flex-start;
-
 
   @media (max-width: ${medium}) {
     flex-direction: row;
@@ -52,10 +45,9 @@ const WrapSelectedTeamCard = styled.div`
 
 export class Team extends Component {
   state = {
-    name: 'Marcos',
-    description: 'Fernandes',
-    video: '...',
-    img: '...'
+    name: trainers[0].name,
+    description: trainers[0].description,
+    img: trainers[0].img
   }
 
   updateTeammate = (name, description, img) => {
