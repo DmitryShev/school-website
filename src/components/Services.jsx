@@ -3,7 +3,7 @@ import { number } from 'prop-types';
 
 import styled from 'styled-components';
 
-import { large, medium } from './helpers/deviceSizes';
+import { medium } from './helpers/deviceSizes';
 import { ProductCarousel } from './elements/ProductCarousel';
 import SalsaLogoBlack from '../assets/img/SalsaLogoBlack.svg';
 

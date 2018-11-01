@@ -1,7 +1,5 @@
 const { join } = require('path');
 
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-
 const cssnano = require('cssnano');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -252,7 +250,6 @@ module.exports = (releaseStage) => {
     new ScriptExtHtmlWebpackPlugin({
       defaultAttribute: 'defer'
     }),
-    new BundleAnalyzerPlugin()
   );
 
   if (isDevelopment) {

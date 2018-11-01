@@ -8,7 +8,7 @@ import { HeaderAbout } from '../components/HeaderAbout';
 import { HeaderTeam } from '../components/HeaderTeam';
 import { Services } from '../components/Services';
 import { Team } from '../components/Team';
-import { Footer } from '../components/Footer';
+// import { Footer } from '../components/Footer';
 import { VideoPresentation } from '../components/VideoPresentation';
 
 // helpers
@@ -90,7 +90,7 @@ export class MainContainer extends Component {
         <Services carousel={carousel} />
         <HeaderTeam text={ourTeam} />
         <Team />
-        <Footer />
+       
       </Container>
     );
   }
