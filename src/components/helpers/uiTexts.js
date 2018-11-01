@@ -20,5 +20,6 @@ export const Contacts = {
   vk: 'https://vk.com/salsa_cubana_nsk',
   instagram: 'https://www.instagram.com/salsa_cubana_nsk/?hl=ru',
   address0: 'пр. Димитрова, 7',
-  address1: 'ул. Пирогова, 16'
+  address1: 'ул. Пирогова, 11',
+  address2: 'ул. Пирогова, 16'
 };

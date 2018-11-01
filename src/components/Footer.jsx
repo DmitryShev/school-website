@@ -22,6 +22,12 @@ const Container = styled.div`
 
 const Contacts = styled.div`
   margin: 0 40px;
+  font-size: 1.2em;
+  a {
+    text-decoration: none;
+    color: yellow;
+    
+  }
 `;
 
 const MapsContainer = styled.div`
@@ -33,6 +39,10 @@ const MapsContainer = styled.div`
 export class Footer extends React.Component {
   state = {
     // 82.91162967681885,55.034822892327284
+    // 54.94807990933321,"lon":83.00189099999999,"zoom":11
+    /*
+
+    */
   }
 
   componentDidMount = () => {
@@ -43,30 +53,40 @@ export class Footer extends React.Component {
     DG.marker([55.0348, 82.9118]).addTo(map).bindPopup('Я попап!');
 
     const secondMap = DG.map('second-map', {
-      'center': [55.0348, 82.9118],
+      'center': [54.8481, 83.0921],
       'zoom': 16
     });
-    DG.marker([55.0348, 82.9118]).addTo(secondMap).bindPopup('Я попап!');
+    DG.marker([54.8481, 83.0921]).addTo(secondMap).bindPopup('Я попап!');
   }
 
   render() {
     const id = 'map';
     const secondId = 'second-map';
-    const address = 'our address is .....';
+    const {
+      tel0,
+      tel1,
+      address0,
+      address1,
+      address2,
+      vk,
+      instagram
+    } = contArr;
     return (
       <Container id="footer">
         <Contacts>
           <h1>Контакты</h1>
-          <p>Телефон для связи: 8(913) 000 00 00</p>
-          <p>E-mail: hello@cuba.ru</p>
+          <p>Телефоны для связи:</p>
+          <p>{tel0}</p>
+          <p>{tel1}</p>
           <h1>Мы в социальных сетях</h1>
-          <p>Вконтакте</p>
-          <p>Телеграмм</p>
-          <p>Твиттер</p>
+          <p>Группа Вконтакте</p>
+          <a href={vk}>Salsa_Cubana_nsk</a>
+          <p>Instagram</p>
+          <a href={instagram}>Salsa_Cubana_nsk</a>
         </Contacts>
         <MapsContainer>
-          <MapCard id={id} address={address} />
-          <MapCard id={secondId} address={address} />
+          <MapCard id={id} address={address0} />
+          <MapCard id={secondId} address={address1} />
         </MapsContainer>
       </Container>
     );
