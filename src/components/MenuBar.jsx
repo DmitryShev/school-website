@@ -41,7 +41,7 @@ const Container = styled.div`
       color: #fff;
       border-radius: 5px;
     }
-    
+
   }
 
   @media (max-width: ${medium}) {
@@ -137,7 +137,7 @@ export const MenuBar = ({ scrollTop }) => (
   <Container top={scrollTop}>
     <Menu top={scrollTop}>
       <Item><a href="#">Залы</a></Item>
-      <Item><a href="#">Тренера</a></Item>
+      <Item><a href="#Our-Team">Тренера</a></Item>
       <Item><a href="#">Расписание</a></Item>
     </Menu>
     {scrollTop && <Logo><img src={SalsaLogo} alt="Logo" /></Logo>}
