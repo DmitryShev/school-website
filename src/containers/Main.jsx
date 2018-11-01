@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import styled, { css } from 'styled-components';
-import { Router, Route, Switch } from 'react-router-dom';
-import createHistory from 'history/createBrowserHistory';
+import styled from 'styled-components';
 
 // components
 
@@ -20,8 +18,6 @@ import { Texts, Marcos } from '../components/helpers/uiTexts';
 const Container = styled.div`
   background-color: #221111;
 `;
-
-const history = createHistory();
 
 export class MainContainer extends Component {
   state = {
