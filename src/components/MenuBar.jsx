@@ -133,25 +133,48 @@ export const MenuButton = styled.div`
 `;
 
 
-export const MenuBar = ({ scrollTop }) => (
-  <Container top={scrollTop}>
-    <Menu top={scrollTop}>
-      <Item><a href="#">Залы</a></Item>
-      <Item><a href="#Our-Team">Тренера</a></Item>
-      <Item><a href="#">Расписание</a></Item>
-    </Menu>
-    {scrollTop && <Logo><img src={SalsaLogo} alt="Logo" /></Logo>}
-    <MenuLeft top={scrollTop}>
-      <Item><a href="#">События</a></Item>
-      <Item><a href="#footer">Контакты</a></Item>
-      <Item><a href="#">Фестивали</a></Item>
-    </MenuLeft>
+export const MenuBar = ({ scrollTop }) => {
+  let showMenu = false;
 
-    <MenuButton top={scrollTop}>
-      <img src={SmallMenuIcon} alt="Menu" />
-    </MenuButton>
-  </Container>
-);
+  return (
+    <Container top={scrollTop}>
+      <Menu top={scrollTop}>
+        <Item><a href="#">Залы</a></Item>
+        <Item><a href="#Our-Team">Тренера</a></Item>
+        <Item><a href="#">Расписание</a></Item>
+      </Menu>
+      {scrollTop && <Logo>
+        <img src={SalsaLogo} alt="Logo" />
+      </Logo>}
+      <MenuLeft top={scrollTop}>
+        <Item><a href="#">События</a></Item>
+        <Item><a href="#footer">Контакты</a></Item>
+        <Item><a href="#">Фестивали</a></Item>
+      </MenuLeft>
+
+      <MenuButton top={scrollTop} onClick={() => {
+        console.log(showMenu)
+        return (showMenu = !showMenu);
+      }}>
+        <img src={SmallMenuIcon} alt="Menu"  />
+        {!showMenu ?
+          <div>
+            <ul>
+              <li><a href="#">Залы</a></li>
+              <li><a href="#Our-Team">Тренера</a></li>
+              <li><a href="#">Расписание</a></li>
+  
+              <li><a href="#">События</a></li>
+              <li><a href="#footer">Контакты</a></li>
+              <li><a href="#">Фестивали</a></li>
+            </ul>
+          </div>
+          : null}
+      </MenuButton>
+      
+    </Container>
+  );
+};
 
 MenuBar.propTypes = {
   scrollTop: bool.isRequired

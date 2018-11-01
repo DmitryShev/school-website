@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// import { MapCard } from './elements/MapCard';
 import { Contacts as contArr } from './helpers/uiTexts';
 import { medium } from './helpers/deviceSizes';
 import map0 from '../assets/img/map0.png';
@@ -90,9 +89,6 @@ export const Footer = () => {
         <a href={mapLink1}>
           <MapCard map={map1} />
         </a>
-
-        {/*<MapCard id={id} address={address0} />*/}
-        {/*<MapCard id={secondId} address={address1} />*/}
       </MapsContainer>
     </Container>
   );
