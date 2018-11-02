@@ -84,20 +84,3 @@ export class Team extends Component {
     );
   }
 }
-
-/*
-export const Team = () => (
-  <Container>
-    <Members>
-      {trainers.map(item => (
-        <MemberCard
-          key={item.id}
-          name={item.name}
-          description={item.description}
-          img={item.img}
-        />))
-      }
-    </Members>
-  </Container>
-);
-*/

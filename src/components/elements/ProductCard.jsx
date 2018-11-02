@@ -1,6 +1,5 @@
 import React from 'react';
-import { string } from 'prop-types';
-import ReactModal from 'react-modal';
+import { string, func, number } from 'prop-types';
 import styled from 'styled-components';
 import { small } from '../helpers/deviceSizes';
 
@@ -18,8 +17,6 @@ const Container = styled.div`
     width: 180px;
   }
 `;
-
-
 
 const ImgContainer = styled.div`
   height: 180px;
@@ -51,7 +48,7 @@ const Title = styled.h1`
 const Description = styled.p`
   background-color: #cc1122;
 `;
-
+/*
 export class ProductCard extends React.Component {
   static propTypes = {
     text: string.isRequired,
@@ -80,32 +77,25 @@ export class ProductCard extends React.Component {
         </ImgContainer>
         <Title onClick={this.handleOpenModal}>{text}</Title>
 
-          <ReactModal isOpen={this.state.showModal} style={{ overlay: { zIndex: '100'} }}>
-            <Description>{description}</Description>
-            <div>{video}</div>
-            <button onClick={this.handleCloseModal}>Close Modal</button>
-          </ReactModal>
-
       </Container>
     );
   }
 }
+*/
 
-/*
 
-export const ProductCard = ({ text, img }) => (
-  <Container>
+export const ProductCard = ({ text, img, handleShowModal, id }) => (
+  <Container onClick={() => handleShowModal(id)}>
     <ImgContainer>
       <img src={img} alt="Dance Icon" />
     </ImgContainer>
     <Title>{text}</Title>
-    <Description>No text</Description>
   </Container>
 );
 
 ProductCard.propTypes = {
   text: string.isRequired,
-  img: string.isRequired
+  img: string.isRequired,
+  handleShowModal: func.isRequired,
+  id: number.isRequired
 };
-
-*/

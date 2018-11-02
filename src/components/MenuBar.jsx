@@ -136,18 +136,18 @@ const MenuButton = styled.div`
 export const MenuBar = ({ scrollTop, showMenu }) => (
   <Container top={scrollTop}>
     <Menu top={scrollTop}>
-      {/*<Item><a href="#">Залы</a></Item>*/}
+      {/* <Item><a href="#">Залы</a></Item> */}
       <Item><a href="#Our-Team">Тренера</a></Item>
-      {/*<Item><a href="#">Расписание</a></Item>*/}
+      {/* <Item><a href="#">Расписание</a></Item> */}
     </Menu>
     {scrollTop &&
     <Logo>
       <img src={SalsaLogo} alt="Logo" />
     </Logo>}
     <MenuLeft top={scrollTop}>
-      {/*<Item><a href="#">События</a></Item>*/}
+      {/* <Item><a href="#">События</a></Item> */}
       <Item><a href="#footer">Контакты</a></Item>
-      {/*<Item><a href="#">Фестивали</a></Item>*/}
+      { /* <Item><a href="#">Фестивали</a></Item> */}
     </MenuLeft>
 
     <MenuButton top={scrollTop} onClick={showMenu}>

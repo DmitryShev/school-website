@@ -10,7 +10,6 @@ const Container = styled.div`
   //height: 80vh;  // 610px;
   margin-top: 120px;
   width: 100%;
-
   height: 610px;
 
   @media (max-width: ${medium}) {
@@ -66,7 +65,7 @@ const About = styled.div`
   background-color:rgba(0, 0, 0, 0.8);
   bottom: 60px;
 
-  font-family: SourceSansProRegular; //GESSTwoLight, SourceSansProRegular, FiraSans, SourceSansProBold, SourceSansProLight; // SourceSansProRegular, GESSTwoLight; 
+  font-family: SourceSansProRegular;
 
   @media (max-width: ${medium}) {
     top: 50%;

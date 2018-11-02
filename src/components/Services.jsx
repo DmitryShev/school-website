@@ -1,5 +1,4 @@
 import React from 'react';
-import { number } from 'prop-types';
 
 import styled from 'styled-components';
 
@@ -40,16 +39,12 @@ const Header = styled.h1`
   }
 `;
 
-export const Services = ({ carousel }) => (
+export const Services = () => (
   <Container>
     <Header>
       <p>Открой для себя мир Salsa Вместе с</p>
       <img src={SalsaLogoBlack} alt="logo" />
     </Header>
-    <ProductCarousel carousel={carousel} />
+    <ProductCarousel />
   </Container>
 );
-
-Services.propTypes = {
-  carousel: number.isRequired
-};
