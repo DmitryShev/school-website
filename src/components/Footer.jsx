@@ -110,12 +110,12 @@ export const Footer = () => {
 
       <MapsContainer>
         <p><strong>{address0}</strong></p>
-        <a href={mapLink0}>
+        <a href={`tel:${mapLink0}`}>
           <MapCard map={map0} />
         </a>
 
         <p><strong>{address2}</strong></p>
-        <a href={mapLink1}>
+        <a href={`tel:${mapLink1}`}>
           <MapCard map={map1} />
         </a>
       </MapsContainer>
