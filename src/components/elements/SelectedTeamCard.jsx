@@ -6,9 +6,6 @@ import { medium } from '../helpers/deviceSizes';
 
 const Container = styled.div`
   width: 400px;
-  //height: 500px;
-  //background-color: #000;
-  //color: #fff;
   margin: 10px;
 
   border-radius: 4px;

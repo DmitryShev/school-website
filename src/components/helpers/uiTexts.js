@@ -23,3 +23,6 @@ export const Contacts = {
   address1: 'ул. Пирогова, 11',
   address2: 'ул. Пирогова, 16'
 };
+
+export const mapLink0 = 'http://2gis.ru/novosibirsk/firm/70000001024116967/center/82.91162967681885,55.034822892327284/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap';
+export const mapLink1 = 'http://2gis.ru/novosibirsk/firm/141265769740098/center/83.092161,54.848143/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap';

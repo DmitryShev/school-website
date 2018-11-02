@@ -8,7 +8,6 @@ import SalsaLogoBlack from '../assets/img/SalsaLogoBlack.svg';
 
 const Container = styled.div`
   display: flex;
-  
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
@@ -29,10 +28,6 @@ const Header = styled.h1`
   height: 320px;
   margin: 40px;
   text-align: center;
-
-  p {
-
-  }
 
   @media (max-width: ${medium}) {
     margin: 20px 20px 10px 20px;

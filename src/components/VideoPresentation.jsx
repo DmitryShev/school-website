@@ -32,7 +32,6 @@ const VideoContainer = styled.div`
 `;
 
 const Video = styled.video`
-
   position: absolute;
   opacity: .8;
   top: 0;
@@ -75,10 +74,6 @@ const About = styled.div`
 `;
 
 const Text = styled.div`
-  //font-size: .9rem
-  //font-size: 1.3rem;
-  //text-transform: uppercase;
-
   h1 {
     font-size: 30px;
     font-weight: bold;

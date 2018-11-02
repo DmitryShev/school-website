@@ -12,7 +12,6 @@ import { medium } from '../helpers/deviceSizes';
 
 
 const Container = styled.div`
-  //position: relative;
   width: 50vw;
   margin: 70px;
 
@@ -36,7 +35,7 @@ const Container = styled.div`
 `;
 
 const PagingButton = styled.div`
-  background-color: #eebb33;//#cc1122;
+  background-color: #eebb33;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,15 +101,15 @@ export class ProductCarousel extends React.Component {
     window.removeEventListener('resize', this.handleWindowSize);
   }
 
-  handleShowModal = id => {
+  handleShowModal = (id) => {
     this.setState({
       showModal: !this.state.showModal
-    })
+    });
     if (!this.state.showModal) {
       this.setState({
         text: products[id].text,
         description: products[id].description
-    })
+      });
     }
   }
 
@@ -134,7 +133,13 @@ export class ProductCarousel extends React.Component {
   }
 
   render() {
-    const { settings, showModal, carousel, text, description } = this.state;
+    const {
+      settings,
+      showModal,
+      carousel,
+      text,
+      description
+    } = this.state;
     return (
       <Container>
         <Slider {...settings} slidesToShow={carousel} slidesToScroll={carousel} >

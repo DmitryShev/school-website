@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Contacts as contArr } from './helpers/uiTexts';
+import { Contacts as contArr, mapLink0, mapLink1 } from './helpers/uiTexts';
 import { medium } from './helpers/deviceSizes';
 import map0 from '../assets/img/map0.png';
 import map1 from '../assets/img/map1.png';
@@ -37,7 +37,6 @@ const Contacts = styled.div`
 
   a {
     text-size: 1.1em;
-    // text-decoration: none;
     color: #eebb33;
     font-family: SourceSansProBold;
   }
@@ -64,11 +63,6 @@ const Contacts = styled.div`
 `;
 
 const MapsContainer = styled.div`
-
-  p {
-
-  }
-
   @media (max-width: ${medium}) {
     margin: 0 auto;
   }
@@ -92,17 +86,11 @@ const MapCard = styled.div`
   }
 `;
 
-const mapLink0 = "http://2gis.ru/novosibirsk/firm/70000001024116967/center/82.91162967681885,55.034822892327284/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap";
-const mapLink1 = "http://2gis.ru/novosibirsk/firm/141265769740098/center/83.092161,54.848143/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap";
-
 export const Footer = () => {
-  const id = 'map';
-  const secondId = 'second-map';
   const {
     tel0,
     tel1,
     address0,
-    address1,
     address2,
     vk,
     instagram

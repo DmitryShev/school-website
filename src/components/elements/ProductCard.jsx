@@ -32,10 +32,7 @@ const Title = styled.h1`
   justify-content: center;
   align-items: center;
   align-content: center;
-
-
   background-color: #000;
-
   text-transform: uppercase;
   font-family: SourceSansProRegular, GESSTwoLight;
   font-size: 1.5rem;
@@ -45,9 +42,6 @@ const Title = styled.h1`
   text-align: center;
 `;
 
-const Description = styled.p`
-  background-color: #cc1122;
-`;
 /*
 export class ProductCard extends React.Component {
   static propTypes = {
@@ -84,7 +78,12 @@ export class ProductCard extends React.Component {
 */
 
 
-export const ProductCard = ({ text, img, handleShowModal, id }) => (
+export const ProductCard = ({
+  text,
+  img,
+  handleShowModal,
+  id
+}) => (
   <Container onClick={() => handleShowModal(id)}>
     <ImgContainer>
       <img src={img} alt="Dance Icon" />
