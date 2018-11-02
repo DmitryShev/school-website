@@ -1,5 +1,5 @@
 import React from 'react';
-import { bool } from 'prop-types';
+import { bool, func } from 'prop-types';
 import styled from 'styled-components';
 
 import SalsaLogo from '../assets/img/SalsaLogo.jpg';
@@ -98,7 +98,7 @@ const MenuLeft = styled.ul`
 const Item = styled.li`
   margin: 20px;
   list-style-type: none;
-  
+
   :hover {
     opacity: .5;
     cursor: pointer;
@@ -121,7 +121,7 @@ const Logo = styled.div`
   }
 `;
 
-export const MenuButton = styled.div`
+const MenuButton = styled.div`
   display: none;
   color: #000;
   opacity: 1;
@@ -133,49 +133,32 @@ export const MenuButton = styled.div`
 `;
 
 
-export const MenuBar = ({ scrollTop }) => {
-  let showMenu = false;
+export const MenuBar = ({ scrollTop, showMenu }) => (
+  <Container top={scrollTop}>
+    <Menu top={scrollTop}>
+      {/*<Item><a href="#">Залы</a></Item>*/}
+      <Item><a href="#Our-Team">Тренера</a></Item>
+      {/*<Item><a href="#">Расписание</a></Item>*/}
+    </Menu>
+    {scrollTop &&
+    <Logo>
+      <img src={SalsaLogo} alt="Logo" />
+    </Logo>}
+    <MenuLeft top={scrollTop}>
+      {/*<Item><a href="#">События</a></Item>*/}
+      <Item><a href="#footer">Контакты</a></Item>
+      {/*<Item><a href="#">Фестивали</a></Item>*/}
+    </MenuLeft>
 
-  return (
-    <Container top={scrollTop}>
-      <Menu top={scrollTop}>
-        <Item><a href="#">Залы</a></Item>
-        <Item><a href="#Our-Team">Тренера</a></Item>
-        <Item><a href="#">Расписание</a></Item>
-      </Menu>
-      {scrollTop && <Logo>
-        <img src={SalsaLogo} alt="Logo" />
-      </Logo>}
-      <MenuLeft top={scrollTop}>
-        <Item><a href="#">События</a></Item>
-        <Item><a href="#footer">Контакты</a></Item>
-        <Item><a href="#">Фестивали</a></Item>
-      </MenuLeft>
+    <MenuButton top={scrollTop} onClick={showMenu}>
+      <img src={SmallMenuIcon} alt="Menu" />
+    </MenuButton>
 
-      <MenuButton top={scrollTop} onClick={() => {
-        console.log(showMenu)
-        return (showMenu = !showMenu);
-      }}>
-        <img src={SmallMenuIcon} alt="Menu"  />
-        {!showMenu ?
-          <div>
-            <ul>
-              <li><a href="#">Залы</a></li>
-              <li><a href="#Our-Team">Тренера</a></li>
-              <li><a href="#">Расписание</a></li>
-  
-              <li><a href="#">События</a></li>
-              <li><a href="#footer">Контакты</a></li>
-              <li><a href="#">Фестивали</a></li>
-            </ul>
-          </div>
-          : null}
-      </MenuButton>
-      
-    </Container>
-  );
-};
+  </Container>
+);
+
 
 MenuBar.propTypes = {
-  scrollTop: bool.isRequired
+  scrollTop: bool.isRequired,
+  showMenu: func.isRequired
 };

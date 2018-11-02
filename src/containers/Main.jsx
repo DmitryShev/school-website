@@ -58,11 +58,11 @@ export class MainContainer extends Component {
         this.setState({ carousel: 1 });
         // console.log('carousel: 1');
         break;
-      case (innerWidth < 1024 && innerWidth >= 768 && carousel !== 2):
+      case (innerWidth <= 1024 && innerWidth >= 768 && carousel !== 2):
         this.setState({ carousel: 2 });
         // console.log('carousel: 2');
         break;
-      case (innerWidth >= 1024 && carousel !== 3):
+      case (innerWidth > 1024 && carousel !== 3):
         this.setState({ carousel: 3 });
         // console.log('carousel: 3');
         break;
@@ -79,12 +79,16 @@ export class MainContainer extends Component {
     // }
   }
 
+  showMenu = () => (
+    this.setState({ scrollTop: true })
+  );
+
   render() {
     const { scrollTop, carousel } = this.state;
     const { slogan, ourTeam } = Texts;
     return (
       <Container >
-        <MenuBar scrollTop={scrollTop} />
+        <MenuBar scrollTop={scrollTop} showMenu={this.showMenu} />
         <VideoPresentation {...Marcos} />
         <HeaderAbout slogan={slogan} />
         <Services carousel={carousel} />

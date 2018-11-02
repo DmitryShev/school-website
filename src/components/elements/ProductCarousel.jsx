@@ -19,7 +19,7 @@ const Container = styled.div`
   button {
     width: 60px;
     height: 60px;
-    margin: 0 -40px;
+    margin: 0 -38px;
     z-index: 10;
   }
 
@@ -36,7 +36,7 @@ const Container = styled.div`
 `;
 
 const PagingButton = styled.div`
-  background-color: #cc1122;
+  background-color: #eebb33;//#cc1122;
   display: flex;
   justify-content: center;
   align-items: center;
