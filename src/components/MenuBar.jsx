@@ -2,7 +2,7 @@ import React from 'react';
 import { bool, func } from 'prop-types';
 import styled from 'styled-components';
 
-import SalsaLogo from '../assets/img/SalsaLogo.jpg';
+import SalsaLogo from '../assets/img/icon.svg';
 import SmallMenuIcon from '../assets/img/menu.svg';
 import { large, medium } from './helpers/deviceSizes';
 
@@ -113,11 +113,12 @@ const Logo = styled.div`
   width: 100px;
   height: 100px;
   flex-shrink: 0;
-
+  
   img {
     width: 100%;
     height: 100%;
     border-radius: 100px;
+    background-color: #fff;
   }
 `;
 

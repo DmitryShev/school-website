@@ -12,7 +12,7 @@ import { medium } from '../helpers/deviceSizes';
 
 
 const Container = styled.div`
-  width: 50vw;
+  width: 85vw;
   margin: 70px;
 
   button {
@@ -43,38 +43,7 @@ const PagingButton = styled.div`
   width: 20px;
   height: 20px;
 `;
-/*
-export const ProductCarousel = ({ carousel }) => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: carousel,
-    slidesToScroll: carousel,
-    customPaging: i => <PagingButton><button>{i + 1}</button></PagingButton>
-  };
 
-  return (
-    <Container>
-      <Slider {...settings}>
-        {products.map(item => (
-          <ProductCard
-            text={item.text}
-            img={item.img}
-            key={item.id}
-            description={item.description}
-            video={item.video}
-          />)
-        )}
-      </Slider>
-    </Container>
-  );
-};
-
-ProductCarousel.propTypes = {
-  carousel: number.isRequired
-};
-*/
 export class ProductCarousel extends React.Component {
   state = {
     showModal: false,
@@ -113,19 +82,26 @@ export class ProductCarousel extends React.Component {
     }
   }
 
+  handleCloseModal = () => {
+    this.setState({ showModal: false });
+  }
+
   handleWindowSize = () => {
     const { carousel } = this.state;
     const { innerWidth } = window;
 
     switch (true) {
-      case (innerWidth < 768 && carousel !== 1):
+      case (innerWidth < 740 && carousel !== 1):
         this.setState({ carousel: 1 });
         break;
-      case (innerWidth <= 1024 && innerWidth >= 768 && carousel !== 2):
+      case (innerWidth <= 780 && innerWidth >= 740 && carousel !== 2):
         this.setState({ carousel: 2 });
         break;
-      case (innerWidth > 1024 && carousel !== 3):
+      case (innerWidth <= 1070 && innerWidth >= 780 && carousel !== 3):
         this.setState({ carousel: 3 });
+        break;
+      case (innerWidth > 1070 && carousel !== 4):
+        this.setState({ carousel: 4 });
         break;
       default:
         break;
@@ -155,7 +131,12 @@ export class ProductCarousel extends React.Component {
           )}
         </Slider>
         {showModal &&
-          <ReactModal isOpen={showModal} style={{ overlay: { zIndex: '100' } }} ariaHideApp={false}>
+          <ReactModal
+            isOpen={showModal}
+            style={{ overlay: { zIndex: '100' } }}
+            ariaHideApp={false}
+            onRequestClose={this.handleCloseModal}
+          >
             <p>{text}</p>
             <p>{description}</p>
             <button onClick={this.handleShowModal}>Close Modal</button>

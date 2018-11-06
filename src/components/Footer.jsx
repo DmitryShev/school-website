@@ -100,8 +100,8 @@ export const Footer = () => {
       <Contacts>
         <h1>Контакты</h1>
         <h2><strong>Телефоны для связи:</strong></h2>
-        <p><a href={tel0}>{tel0}</a></p>
-        <p><a href={tel1}>{tel1}</a></p>
+        <p><a href={`tel:${tel0}`}>{tel0}</a></p>
+        <p><a href={`tel:${tel1}`}>{tel1}</a></p>
         <h2>Мы в социальных сетях</h2>
         <a href={vk}><img src={vkIcon} alt="vk logo" /></a>
         <a href={instagram}><img src={instagramIcon} alt="instagram logo" /></a>
@@ -110,12 +110,12 @@ export const Footer = () => {
 
       <MapsContainer>
         <p><strong>{address0}</strong></p>
-        <a href={`tel:${mapLink0}`}>
+        <a href={mapLink0}>
           <MapCard map={map0} />
         </a>
 
         <p><strong>{address2}</strong></p>
-        <a href={`tel:${mapLink1}`}>
+        <a href={mapLink1}>
           <MapCard map={map1} />
         </a>
       </MapsContainer>

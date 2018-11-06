@@ -1,5 +1,5 @@
 export const Texts = {
-  slogan: 'Школа латиноамериканских танцев под руководством профессионального танцовщика и хореографа Маркоса Фернандеса',
+  slogan: 'Открой для себя мир Salsa Вместе с Salsa Cubana Novosibirsk',
   schoolName: 'salsa cubana novosibirsk',
   ourTeam: 'Наша команда'
 };
