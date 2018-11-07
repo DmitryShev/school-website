@@ -1,3 +1,6 @@
+import marcos from '../../assets/img/marcos1.jpg';
+import denAndMaria from '../../assets/img/denAndMaria.jpg';
+
 export const trainers = [
   {
     id: 0,
@@ -23,7 +26,7 @@ export const trainers = [
     Перми, Йошкар-Оле, Нижнем Новгороде, Тольятти, Саратове, Краснодаре, Павлодаре, Воронеже, Иркутске;входил в состав жюри конкурса 
     по сальсе и хастлу «Танцевальные страсти» в июле 2009 и 2010 года в городе Красноярске;с 2010 года - постоянный преподаватель 
     летних и зимних тренировочных лагерей танцоров спортивно-бальных танцев по сальсе, кубинской румбе, бачате и афро-кубано`,
-    img: 'https://pp.userapi.com/c834103/v834103712/12d680/6Y8ziiNl7R0.jpg?ava=1'
+    img: marcos
   },
   {
     id: 1,
@@ -39,36 +42,30 @@ export const trainers = [
   },
   {
     id: 3,
-    name: 'Мария Старостина',
-    description: 'te best of the best, lorem ru 102 hahasdhad',
-    img: 'https://pp.userapi.com/c836431/v836431121/4ae4d/X_zFlGkcB10.jpg'
+    name: 'Денис Абраменков и Мария Старостина',
+    description: 'Денис и Марина уже около 10 лет занимаются социальными танцами. Проводят Мастер-классы по городам России, дальнего и ближнего зарубежья. Активные участники Сальса Фестивалей в России и Зарубежом. Танцевальные направления: Salsa NY (mambo) Salsa Cubana, Timba Salsa LA Bachata Постановка шоу-номеров. Достижения в танцах: Премия “Мистер Опора” по версии Salsa Night Awards за 2011 год (г. Москва). Победитель «Первый Сибирский salsa-battle» 2012 г. (г. Новосибирск) 1 место в конкурсе ДнД по классу сальса в рамках празднования 4 Дня Рождения школы Salsa Cubana Novosibirsk 2013г. (г. Новосибирск) 1 место в конкурсе ДнД по классу сальса в рамках Hot Winter in Siberia 2015г. ( г. Красноярск) 1 место в Турнире Преподавателей в рамках Hot Winter in Siberia 2015г. ( г. Красноярск) 1 место в Конкурсе J&J (professional) на Hot Winter in Siberia 2016 1 место в Конкурсе J&J на Чемпионате по социальным танцам Social Dance Championship 2016 (г. Екатеринбург)',
+    img: denAndMaria
   },
   {
     id: 4,
-    name: 'Денис Абраменков',
-    description: 'te best22 of fathe best, loreasdm ru 10 33hahasdhad',
-    img: 'https://pp.userapi.com/c636726/v636726424/4c608/h8sIeU66bg4.jpg'
-  },
-  {
-    id: 5,
     name: 'Марина Молчанова',
     description: 'te best of the best, lordddem ru 101 hahasdh62ad',
     img: 'https://pp.userapi.com/c847021/v847021640/d1bd5/OdlKWMKmCCM.jpg'
   },
   {
-    id: 6,
+    id: 5,
     name: 'Влад Сабенин',
     description: 'te best of the best, loddasdrem ru 101 hahasdhad',
     img: 'https://pp.userapi.com/c834202/v834202433/ddd83/qugwl3D1vFk.jpg'
   },
   {
-    id: 7,
+    id: 6,
     name: 'Наталья Карпова',
     description: 'teasdd be234st of the best, lorem ru 101 hahaasdhad',
     img: 'https://pp.userapi.com/c841124/v841124917/7d1b5/Uy8mQON2FRo.jpg'
   },
   {
-    id: 8,
+    id: 7,
     name: 'Кристина Лучко',
     description: 'te best of the best, lorem ru 101 hahddsasdhffad',
     img: 'https://pp.userapi.com/c845218/v845218570/e8823/jUCpWLXI85A.jpg'

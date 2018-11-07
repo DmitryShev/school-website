@@ -12,7 +12,7 @@ import { medium } from '../helpers/deviceSizes';
 
 
 const Container = styled.div`
-  width: 85vw;
+  width: 65vw;
   margin: 70px;
 
   button {
@@ -94,13 +94,13 @@ export class ProductCarousel extends React.Component {
       case (innerWidth < 740 && carousel !== 1):
         this.setState({ carousel: 1 });
         break;
-      case (innerWidth <= 780 && innerWidth >= 740 && carousel !== 2):
+      case (innerWidth <= 1030 && innerWidth >= 740 && carousel !== 2):
         this.setState({ carousel: 2 });
         break;
-      case (innerWidth <= 1070 && innerWidth >= 780 && carousel !== 3):
+      case (innerWidth <= 1500 && innerWidth >= 1030 && carousel !== 3):
         this.setState({ carousel: 3 });
         break;
-      case (innerWidth > 1070 && carousel !== 4):
+      case (innerWidth > 1500 && carousel !== 4):
         this.setState({ carousel: 4 });
         break;
       default:
