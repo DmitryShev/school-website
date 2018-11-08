@@ -32,7 +32,10 @@ const Container = styled.div`
     width: 60vw;
     margin-top: 10px;
   }
+
+  
 `;
+
 
 const PagingButton = styled.div`
   background-color: #eebb33;
@@ -137,6 +140,14 @@ export class ProductCarousel extends React.Component {
             ariaHideApp={false}
             onRequestClose={this.handleCloseModal}
           >
+            <iframe
+              title="dance video"
+              width="100%"
+              height="auto"
+              src="https://www.youtube.com/embed/C9aYcBZPClE"
+              frameBorder="0"
+              allowFullScreen
+            />
             <p>{text}</p>
             <p>{description}</p>
             <button onClick={this.handleShowModal}>Close Modal</button>
