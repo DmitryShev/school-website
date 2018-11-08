@@ -22,6 +22,7 @@ const Container = styled.div`
 `;
 
 const Contacts = styled.div`
+  width: 300px;
   margin: 0 40px;
   font-size: 1.2em;
   
@@ -60,11 +61,24 @@ const Contacts = styled.div`
       height: 54px;
     }
   }
+
+  @media (max-width: ${medium}) {
+    margin: 10px auto;
+  }
 `;
 
 const MapsContainer = styled.div`
+  margin-top: 20px;
   @media (max-width: ${medium}) {
-    margin: 0 auto;
+    margin: 10px auto;
+  }
+
+  strong {
+    margin: 20px 40px;
+
+    @media (max-width: ${medium}) {
+      margin: 0 auto;
+    }
   }
 `;
 
