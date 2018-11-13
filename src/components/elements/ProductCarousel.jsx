@@ -54,7 +54,6 @@ const IFrameBlock = styled.div`
     margin: 5px 0;
     @media (max-width: ${medium}) {
       width: 100%;
-      
     }
   }
 
@@ -118,6 +117,11 @@ const PagingButton = styled.div`
 
 const WrapDesc = styled.p`
   margin-top: 10px;
+  font-size: 1.2rem;
+
+  @media (max-width: ${medium}) {
+    font-size: 1rem;
+  }
 `;
 
 export class ProductCarousel extends Component {
