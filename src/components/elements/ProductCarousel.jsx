@@ -15,7 +15,6 @@ import closeModal from '../../assets/img/closeModal.svg';
 const Container = styled.div`
   width: 65vw;
   margin: 70px;
-  
 
   button {
     width: 60px;
@@ -43,23 +42,24 @@ const IFrameBlock = styled.div`
   justify-content: space-between;
   align-items: center;
   align-content: center;
+
   width: 100%;
   height: 100%;
   margin: 5px 0;
 
-  iFrame {
+  iframe {
     width: 49.5%;
     height: 100%;
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
     margin: 5px 0;
+
     @media (max-width: ${medium}) {
       width: 100%;
+      height: 49.5%;
     }
   }
 
   @media (max-width: ${medium}) {
-    width: 100%;
-    height: 100%;
     flex-direction: column;
   }
 `;
@@ -71,6 +71,27 @@ const Button = styled.button`
   border: none;
   outline: 0;
   margin: 5px;
+
+  :hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  :active {
+    box-shadow: inset 1px 1px 10px -1px;
+    border: 1px solid #000;
+  }
+`;
+
+const CloseButton = styled.button`
+  outline: 0;
+  border-radius: 6px;
+  padding: 4px;
+  margin-top: 12px;
+  font-family: SourceSansProRegular;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: .065em;
+  float: right;
 
   :hover {
     opacity: 0.8;
@@ -103,7 +124,6 @@ const ModalHeader = styled.div`
     }
   }
 `;
-
 
 const PagingButton = styled.div`
   background-color: #eebb33;
@@ -242,7 +262,7 @@ export class ProductCarousel extends Component {
               />
             </IFrameBlock>
             <WrapDesc>{description}</WrapDesc>
-            <button onClick={this.handleShowModal}>Закрыть</button>
+            <CloseButton onClick={this.handleShowModal}>Закрыть</CloseButton>
           </ReactModal>}
       </Container>
     );
