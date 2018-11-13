@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Slider from 'react-slick';
 import styled from 'styled-components';
 import ReactModal from 'react-modal';
@@ -9,11 +9,13 @@ import 'slick-carousel/slick/slick-theme.css';
 import { products } from '../helpers/products';
 import { ProductCard } from './ProductCard';
 import { medium } from '../helpers/deviceSizes';
+import closeModal from '../../assets/img/closeModal.svg';
 
 
 const Container = styled.div`
   width: 65vw;
   margin: 70px;
+  
 
   button {
     width: 60px;
@@ -32,8 +34,75 @@ const Container = styled.div`
     width: 60vw;
     margin-top: 10px;
   }
+`;
 
-  
+const IFrameBlock = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+  margin: 5px 0;
+
+  iFrame {
+    width: 49.5%;
+    height: 100%;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+    margin: 5px 0;
+    @media (max-width: ${medium}) {
+      width: 100%;
+      
+    }
+  }
+
+  @media (max-width: ${medium}) {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+  }
+`;
+
+const Button = styled.button`
+  width: 32px;
+  height: 32px;
+  background-color: #eebb33;
+  border: none;
+  outline: 0;
+  margin: 5px;
+
+  :hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  :active {
+    box-shadow: inset 1px 1px 10px -1px;
+    border: 1px solid #000;
+  }
+`;
+
+const ModalHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eebb33;
+  margin: 0;
+
+  h1 {
+    text-transform: uppercase;
+    font-family: SourceSansProRegular;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: .065em;
+    margin: 0 5px;
+    text-align: center;
+
+    @media (max-width: ${medium}) {
+      font-size: 1rem;
+    }
+  }
 `;
 
 
@@ -47,7 +116,11 @@ const PagingButton = styled.div`
   height: 20px;
 `;
 
-export class ProductCarousel extends React.Component {
+const WrapDesc = styled.p`
+  margin-top: 10px;
+`;
+
+export class ProductCarousel extends Component {
   state = {
     showModal: false,
     carousel: 1,
@@ -58,7 +131,9 @@ export class ProductCarousel extends React.Component {
       customPaging: i => <PagingButton><button>{i + 1}</button></PagingButton>
     },
     text: 'hello',
-    description: 'hello'
+    description: 'hello',
+    video0: 'no video',
+    video1: 'no video'
   }
 
   componentWillMount = () => {
@@ -80,7 +155,9 @@ export class ProductCarousel extends React.Component {
     if (!this.state.showModal) {
       this.setState({
         text: products[id].text,
-        description: products[id].description
+        description: products[id].description,
+        video0: products[id].video0,
+        video1: products[id].video1
       });
     }
   }
@@ -117,7 +194,9 @@ export class ProductCarousel extends React.Component {
       showModal,
       carousel,
       text,
-      description
+      description,
+      video0,
+      video1
     } = this.state;
     return (
       <Container>
@@ -140,17 +219,26 @@ export class ProductCarousel extends React.Component {
             ariaHideApp={false}
             onRequestClose={this.handleCloseModal}
           >
-            <iframe
-              title="dance video"
-              width="100%"
-              height="auto"
-              src="https://www.youtube.com/embed/C9aYcBZPClE"
-              frameBorder="0"
-              allowFullScreen
-            />
-            <p>{text}</p>
-            <p>{description}</p>
-            <button onClick={this.handleShowModal}>Close Modal</button>
+            <ModalHeader>
+              <h1>{text}</h1>
+              <Button onClick={this.handleShowModal}><img src={closeModal} alt="close" /></Button>
+            </ModalHeader>
+            <IFrameBlock>
+              <iframe
+                title="dance video"
+                src={video0}
+                frameBorder="0"
+                allowFullScreen
+              />
+              <iframe
+                title="dance video"
+                src={video1}
+                frameBorder="0"
+                allowFullScreen
+              />
+            </IFrameBlock>
+            <WrapDesc>{description}</WrapDesc>
+            <button onClick={this.handleShowModal}>Закрыть</button>
           </ReactModal>}
       </Container>
     );

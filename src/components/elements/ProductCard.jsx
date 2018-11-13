@@ -1,7 +1,7 @@
 import React from 'react';
 import { string, func, number } from 'prop-types';
 import styled from 'styled-components';
-import { small } from '../helpers/deviceSizes';
+import { small, medium } from '../helpers/deviceSizes';
 
 const Container = styled.div`
   width: 218px;
@@ -40,43 +40,11 @@ const Title = styled.h1`
   letter-spacing: .065em;
   height: 60px;
   text-align: center;
+
+  @media (max-width: ${medium}) {
+    font-size: 1.2rem;
+  }
 `;
-
-/*
-export class ProductCard extends React.Component {
-  static propTypes = {
-    text: string.isRequired,
-    img: string.isRequired,
-    description: string.isRequired
-  };
-
-  state = {
-    showModal: false
-  }
-
-  handleOpenModal = () => {
-    this.setState({ showModal: true });
-  }
-
-  handleCloseModal = () => {
-    this.setState({ showModal: false });
-  }
-
-  render() {
-    const { img, text, description, video } = this.props;
-    return (
-      <Container>
-        <ImgContainer onClick={this.handleOpenModal}>
-          <img src={img} alt="Dance Icon" />
-        </ImgContainer>
-        <Title onClick={this.handleOpenModal}>{text}</Title>
-
-      </Container>
-    );
-  }
-}
-*/
-
 
 export const ProductCard = ({
   text,

@@ -37,7 +37,7 @@ const Contacts = styled.div`
   }
 
   a {
-    text-size: 1.1em;
+    font-size: 1.1em;
     color: #eebb33;
     font-family: SourceSansProBold;
   }
