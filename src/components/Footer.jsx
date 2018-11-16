@@ -69,6 +69,14 @@ const Contacts = styled.div`
 
 const MapsContainer = styled.div`
   margin-top: 20px;
+
+  h3 {
+    margin: 5px 40px;
+
+    @media (max-width: ${medium}) {
+      margin: 5px 0;
+    }
+  }
   @media (max-width: ${medium}) {
     margin: 10px auto;
   }
@@ -113,16 +121,16 @@ export const Footer = () => {
     <Container id="footer">
       <Contacts>
         <h1>Контакты</h1>
-        <h2><strong>Телефоны для связи:</strong></h2>
+        <h2>Телефоны для связи</h2>
         <p><a href={`tel:${tel0}`}>{tel0}</a></p>
         <p><a href={`tel:${tel1}`}>{tel1}</a></p>
         <h2>Мы в социальных сетях</h2>
         <a href={vk}><img src={vkIcon} alt="vk logo" /></a>
         <a href={instagram}><img src={instagramIcon} alt="instagram logo" /></a>
-        <h2>Где мы занимаемся</h2>
       </Contacts>
 
       <MapsContainer>
+        <h3>Адреса занятий:</h3>
         <p><strong>{address0}</strong></p>
         <a href={mapLink0}>
           <MapCard map={map0} />
