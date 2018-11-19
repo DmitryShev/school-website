@@ -22,7 +22,7 @@ const Container = styled.div`
 
   @media (max-width: ${medium}) {
     flex-direction: column;
-    height: 730px;
+    height: 850px;
     justify-content: flex-start;
   }
 

@@ -6,6 +6,7 @@ import timba from '../../assets/img/timba.jpg';
 import ladyStyle from '../../assets/img/lady_style.jpg';
 import afro from '../../assets/img/afro.jpg';
 import bachata from '../../assets/img/bachata.jpg';
+import kizomba from '../../assets/img/kizomba.jpg';
 
 export const products = [
   {
@@ -130,7 +131,7 @@ export const products = [
   },
   {
     id: 8,
-    img: 'https://cdn2.trend.az/media/pictures/2015/04/06/proflaftika_tv_kanal_060415.jpg',
+    img: kizomba,
     text: 'Kizomba',
     description:
     `Кизомба - современный городской популярный парный танец, а также музыкальный жанр. Этот танец возник как смесь
@@ -139,7 +140,7 @@ export const products = [
     video0: 'https://vk.com/video_ext.php?oid=-4524170&id=456239111&hash=e8c77fc0c4ab2993',
     video1: 'https://vk.com/video_ext.php?oid=-4524170&id=456239074&hash=f534ad77f344b8c6'
   },
-  {
+  /*{
     id: 9,
     img: 'https://cdn2.trend.az/media/pictures/2015/04/06/proflaftika_tv_kanal_060415.jpg',
     text: 'Reggeton',
@@ -151,5 +152,5 @@ export const products = [
     кубатоном.`,
     video0: 'https://vk.com/video_ext.php?oid=49873295&id=171361586&hash=6dd678581371ce34',
     video1: 'https://www.youtube.com/embed/i4HRVd7hU_o'
-  },
+  },*/
 ];

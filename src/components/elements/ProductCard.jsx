@@ -5,10 +5,11 @@ import { small, medium } from '../helpers/deviceSizes';
 
 const Container = styled.div`
   width: 218px;
-  height: 280px;
+  height: 400px;//280px;
   margin: auto;
   cursor: pointer;
   color: #fff;
+
   :hover {
     opacity: 0.8;
   }
@@ -19,10 +20,13 @@ const Container = styled.div`
 `;
 
 const ImgContainer = styled.div`
-  height: 180px;
+  height: 280px; // 180px;
     img {
+      border-radius: 4px 4px 0 0;
       width: 100%;
       height: 100%;
+      object-fit: cover;
+      object-position: top;
     }
 `;
 
