@@ -21,13 +21,16 @@ const Container = styled.div`
 
 const ImgContainer = styled.div`
   height: 280px; // 180px;
-    img {
+  background: url(${({ img }) => img}) no-repeat center center;
+  background-size: cover;
+  border-radius: 4px 4px 0 0;
+    /*img {
       border-radius: 4px 4px 0 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: top;
-    }
+    }*/
 `;
 
 const Title = styled.h1`
@@ -57,9 +60,7 @@ export const ProductCard = ({
   id
 }) => (
   <Container onClick={() => handleShowModal(id)}>
-    <ImgContainer>
-      <img src={img} alt="Dance Icon" />
-    </ImgContainer>
+    <ImgContainer img={img} />
     <Title>{text}</Title>
   </Container>
 );

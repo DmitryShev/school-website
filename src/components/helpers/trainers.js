@@ -1,5 +1,8 @@
 import marcos from '../../assets/img/marcos1.jpg';
 import denAndMaria from '../../assets/img/denAndMaria.jpg';
+import marinaMolchanova from '../../assets/img/marinaMolchanova.jpg';
+import berani from '../../assets/img/berani.jpg';
+import vlad from '../../assets/img/vlad.jpg';
 
 export const trainers = [
   {
@@ -38,7 +41,7 @@ export const trainers = [
     id: 2,
     name: 'Берани Ригондю',
     description: 'te best of fffdfthe best, lorem ru 102 hahasdhad',
-    img: 'https://pp.userapi.com/c848524/v848524306/946bd/ZmvGLtZmIK8.jpg'
+    img: berani
   },
   {
     id: 3,
@@ -49,14 +52,17 @@ export const trainers = [
   {
     id: 4,
     name: 'Марина Молчанова',
-    description: 'te best of the best, lordddem ru 101 hahasdh62ad',
-    img: 'https://pp.userapi.com/c847021/v847021640/d1bd5/OdlKWMKmCCM.jpg'
+    description:
+    `Начала знакомство с латиноамериканскими танцами в августе 2009 года в школе Salsa Cubana Novosibirsk под руководством профессионального танцовщика и хореографа Маркоса Фернандеса. С того момента стараюсь не пропускать самые интересные сальса мероприятия, фестивали и мастер-классы известных преподавателей в России и за рубежом. 
+    Танцевальные направления: Salsa Cubana, Timba, Bachata, Cha-cha, Kizomba 
+    «Для меня Танец - это стиль жизни, способ самовыражения. Танец не имеет вероисповедания, ограничений по возрасту, не несет каких-то определенных политических взглядов, не делит людей по цвету кожи. Научить танцевать можно любого, главное - желание и стремление! Я получаю огромное удовольствие, когда вижу развитие и успехи своих учеников, радость и счастье на их лицах!»`,
+    img: marinaMolchanova
   },
   {
     id: 5,
     name: 'Влад Сабенин',
     description: 'te best of the best, loddasdrem ru 101 hahasdhad',
-    img: 'https://pp.userapi.com/c834202/v834202433/ddd83/qugwl3D1vFk.jpg'
+    img: vlad
   },
   {
     id: 6,
