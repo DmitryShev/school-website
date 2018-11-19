@@ -5,7 +5,7 @@ import { small, medium } from '../helpers/deviceSizes';
 
 const Container = styled.div`
   width: 218px;
-  height: 400px;//280px;
+  height: 400px; //280px;
   margin: auto;
   cursor: pointer;
   color: #fff;

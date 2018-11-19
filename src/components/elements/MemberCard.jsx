@@ -33,26 +33,28 @@ const Container = styled.div`
   }
 
   @media (max-width: ${medium}) {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     margin: 5px;
   }
 `;
 
 const ImgContainer = styled.div`
   width: 100%;
-  height: 90%;
-
-  img {
-    border-radius: 4px 4px 0 0;
-    width: 100%;
-    height: 100%;
-  }
+  height: 100%;
+  background: url(${({ img }) => img}) no-repeat center center;
+  background-size: cover;
+  border-radius: 4px 4px 0 0;
 `;
 
 const Title = styled.h3`
   text-align: center;
-  height: 9%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 50px;
 
   @media (max-width: ${medium}) {
     display: none;
@@ -61,9 +63,7 @@ const Title = styled.h3`
 
 export const MemberCard = ({ name, img, onClick }) => (
   <Container onClick={onClick}>
-    <ImgContainer>
-      <img src={img} alt="Trainer" />
-    </ImgContainer>
+    <ImgContainer img={img} />
     <Title>{name}</Title>
   </Container>
 );
