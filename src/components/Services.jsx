@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import { medium } from './helpers/deviceSizes';
 import { ProductCarousel } from './elements/ProductCarousel';
 import SalsaLogoBlack from '../assets/img/icon.svg';
-import phone from '../assets/img/phone.jpg';
 
 const Container = styled.div`
   display: flex;
@@ -15,8 +14,6 @@ const Container = styled.div`
   align-content: center;
 
   background-color: #F9F4E8;
-  // background: url(${phone}) no-repeat center;
-  // background-size: cover;
 
   height: 600px;
 

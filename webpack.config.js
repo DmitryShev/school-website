@@ -149,7 +149,7 @@ module.exports = (releaseStage) => {
 
   rules.push({
     test: /\.(mp4|webm)$/,
-    //include: join(__dirname, 'src/assets/videos'),
+    // include: join(__dirname, 'src/assets/videos'),
     loader: 'file-loader',
     options: {
       name: isDevelopment ? 'videos/[name].[ext]' : 'videos/[name]-[hash].[ext]'
@@ -243,7 +243,7 @@ module.exports = (releaseStage) => {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       inject: 'head',
-      title: 'Salsa Cubana',
+      title: 'Salsa Cubana Novosibirsk',
       template: './src/index.html',
       releaseStage
     }),

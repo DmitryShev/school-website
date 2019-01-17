@@ -16,6 +16,10 @@ const Container = styled.div`
     text-align: center;
   }
 
+  h4 {
+    padding: 5px;
+  }
+
   p {
     padding: 5px;
     
@@ -40,12 +44,18 @@ const ImgContainer = styled.div`
   }
 `;
 
-export const SelectedTeamCard = ({ name, description, img }) => (
+export const SelectedTeamCard = ({
+  name,
+  description,
+  img,
+  direction
+}) => (
   <Container>
     <ImgContainer>
       <img src={img} alt="Trainer" />
     </ImgContainer>
     <h2>{name}</h2>
+    <h4>{direction}</h4>
     <p>{description}</p>
   </Container>
 );
@@ -53,5 +63,6 @@ export const SelectedTeamCard = ({ name, description, img }) => (
 SelectedTeamCard.propTypes = {
   name: string.isRequired,
   img: string.isRequired,
+  direction: string.isRequired,
   description: string.isRequired
 };

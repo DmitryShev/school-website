@@ -2,29 +2,25 @@ import React from 'react';
 import { string } from 'prop-types';
 import styled from 'styled-components';
 
-import Mp4 from '../assets/videos/video-bg.mp4';
+import Mp4 from '../assets/videos/salsa-bg.mp4';
 import MarcImg from '../assets/img/marcos.jpg';
 import { medium } from './helpers/deviceSizes';
 
 const Container = styled.div`
-  //height: 80vh;  // 610px;
   margin-top: 120px;
   width: 100%;
   height: 610px;
-
-  @media (max-width: ${medium}) {
-    //height: 100vh;
-  }
 `;
 
 const VideoContainer = styled.div`
   background-color: #000;
   background-size: cover;
-  position: relative;
-  width: 100%;
-  height: 100%;
 
+  position: fixed;
+  top: 120px; right: 0; bottom: 0; left: 0;
   overflow: hidden;
+  height: auto;
+  z-index: -1;
 
   @media (max-width: ${medium}) {
     background-color: #eca521;
@@ -32,19 +28,21 @@ const VideoContainer = styled.div`
 `;
 
 const Video = styled.video`
-  position: absolute;
+  
   opacity: .8;
   top: 0;
   left: 0;
-  width: 100%;
+  position: absolute;
+  width: auto; 
   height: auto;
-
   min-width: 100%;
   min-height: 100%;
+
 
   @media (max-width: ${medium}) {
     display: none;
   }
+
 `;
 
 const About = styled.div`

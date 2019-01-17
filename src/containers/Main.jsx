@@ -15,7 +15,7 @@ import { Texts, Marcos } from '../components/helpers/uiTexts';
 
 
 const Container = styled.div`
-  background-color: #221111;
+  // background-color: #221111;
 `;
 
 export class MainContainer extends Component {

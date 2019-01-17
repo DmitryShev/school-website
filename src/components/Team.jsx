@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 
 import { trainers } from './helpers/trainers';
@@ -43,25 +43,30 @@ const WrapSelectedTeamCard = styled.div`
   flex: 1;
 `;
 
-export class Team extends Component {
+export class Team extends PureComponent {
   state = {
     name: trainers[0].name,
     description: trainers[0].description,
-    img: trainers[0].img
+    img: trainers[0].img,
+    direction: trainers[0].direction
   }
 
-  updateTeammate = (name, description, img) => {
-    if (this.state.name !== name && this.state.description !== description) {
-      this.setState({
-        name,
-        description,
-        img
-      });
-    }
+  updateTeammate = (name, description, img, direction) => {
+    this.setState(() => ({
+      name,
+      description,
+      img,
+      direction
+    }));
   }
 
   render() {
-    const { name, description, img } = this.state;
+    const {
+      name,
+      description,
+      img,
+      direction
+    } = this.state;
     return (
       <Container>
         <MemberContainer>
@@ -69,16 +74,14 @@ export class Team extends Component {
             {trainers.map(item => (
               <MemberCard
                 key={item.id}
-                name={item.name}
-                description={item.description}
-                img={item.img}
-                onClick={() => this.updateTeammate(item.name, item.description, item.img)}
+                updateTeammate={this.updateTeammate}
+                {...item}
               />))
             }
           </Members>
         </MemberContainer>
         <WrapSelectedTeamCard>
-          <SelectedTeamCard name={name} description={description} img={img} />
+          <SelectedTeamCard name={name} description={description} img={img} direction={direction} />
         </WrapSelectedTeamCard>
       </Container>
     );

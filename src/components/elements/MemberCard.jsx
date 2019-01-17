@@ -61,8 +61,14 @@ const Title = styled.h3`
   }
 `;
 
-export const MemberCard = ({ name, img, onClick }) => (
-  <Container onClick={onClick}>
+export const MemberCard = ({
+  name,
+  img,
+  description,
+  direction,
+  updateTeammate
+}) => (
+  <Container onClick={() => updateTeammate(name, description, img, direction)}>
     <ImgContainer img={img} />
     <Title>{name}</Title>
   </Container>
@@ -71,5 +77,7 @@ export const MemberCard = ({ name, img, onClick }) => (
 MemberCard.propTypes = {
   name: string.isRequired,
   img: string.isRequired,
-  onClick: func.isRequired
+  description: string.isRequired,
+  direction: string.isRequired,
+  updateTeammate: func.isRequired
 };

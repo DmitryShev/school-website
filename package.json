@@ -12,7 +12,7 @@
     "npm": "6.4.1"
   },
   "scripts": {
-    "express": "webpack-dev-server --progress --colors",
+    "express": "webpack-dev-server --progress --colors --hot --open",
     "build:dev": "NODE_ENV=production webpack --env dev --progress --colors",
     "build:prod": "NODE_ENV=production webpack --env production --progress --colors",
     "console": "NODE_ENV=production webpack --env production",
