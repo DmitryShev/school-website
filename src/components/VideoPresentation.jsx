@@ -10,6 +10,7 @@ const Container = styled.div`
   margin-top: 120px;
   width: 100%;
   height: 610px;
+  position: relative;
 `;
 
 const VideoContainer = styled.div`
@@ -65,7 +66,6 @@ const About = styled.div`
   font-family: SourceSansProRegular;
 
   @media (max-width: ${medium}) {
-    margin-top: 120px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
