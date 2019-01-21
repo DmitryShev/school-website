@@ -65,6 +65,7 @@ const About = styled.div`
   font-family: SourceSansProRegular;
 
   @media (max-width: ${medium}) {
+    margin-top: 120px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -106,16 +107,16 @@ export const VideoPresentation = ({ schoolName, text, name }) => (
         <source src={Mp4} type="video/mp4" />
       </Video>
 
-      <About>
-        <Text>
-          <h1>{schoolName}</h1>
-          <p>{text}</p>
-          <Name>{name}</Name>
-          <img src={MarcImg} alt="marcos" />
-        </Text>
-      </About>
-
     </VideoContainer>
+
+    <About>
+      <Text>
+        <h1>{schoolName}</h1>
+        <p>{text}</p>
+        <Name>{name}</Name>
+        <img src={MarcImg} alt="marcos" />
+      </Text>
+    </About>
   </Container>
 );
 

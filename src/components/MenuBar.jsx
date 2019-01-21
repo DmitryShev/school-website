@@ -138,7 +138,7 @@ export const MenuBar = ({ scrollTop, showMenu }) => (
   <Container top={scrollTop}>
     <Menu top={scrollTop}>
       {/* <Item><a href="#">Залы</a></Item> */}
-      <Item><a href="#Our-Team">Тренера</a></Item>
+      <Item><a href="#Our-Team">Тренеры</a></Item>
       {/* <Item><a href="#">Расписание</a></Item> */}
     </Menu>
     {scrollTop &&
