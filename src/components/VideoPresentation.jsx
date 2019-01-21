@@ -17,7 +17,7 @@ const VideoContainer = styled.div`
   background-size: cover;
 
   position: fixed;
-  top: 120px; right: 0; bottom: 0; left: 0;
+  top: 0; right: 0; bottom: 0; left: 0;
   overflow: hidden;
   height: auto;
   z-index: -1;
