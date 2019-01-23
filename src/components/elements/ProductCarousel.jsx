@@ -13,7 +13,7 @@ import closeModal from '../../assets/img/closeModal.svg';
 
 
 const Container = styled.div`
-  width: 65vw;
+  width: 60vw;
   margin: 70px;
 
   button {
@@ -30,7 +30,7 @@ const Container = styled.div`
   }
 
   @media (max-width: ${medium}) {
-    width: 60vw;
+    // width: 60vw;
     margin-top: 10px;
   }
 `;
@@ -198,10 +198,10 @@ export class ProductCarousel extends Component {
       case (innerWidth < 740 && carousel !== 1):
         this.setState({ carousel: 1 });
         break;
-      case (innerWidth <= 1030 && innerWidth >= 740 && carousel !== 2):
+      case (innerWidth <= 1100 && innerWidth >= 740 && carousel !== 2):
         this.setState({ carousel: 2 });
         break;
-      case (innerWidth <= 1500 && innerWidth >= 1030 && carousel !== 3):
+      case (innerWidth <= 1500 && innerWidth >= 1100 && carousel !== 3):
         this.setState({ carousel: 3 });
         break;
       case (innerWidth > 1500 && carousel !== 4):

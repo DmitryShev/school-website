@@ -18,18 +18,17 @@ const VideoContainer = styled.div`
   background-size: cover;
 
   position: fixed;
-  top: 0; right: 0; bottom: 0; left: 0;
+  top: 30px; right: 0; bottom: 0; left: 0;
   overflow: hidden;
   height: auto;
   z-index: -1;
 
   @media (max-width: ${medium}) {
-    background-color: #eca521;
+    // background-color: #eca521;
   }
 `;
 
 const Video = styled.video`
-  
   opacity: .8;
   top: 0;
   left: 0;
@@ -69,6 +68,7 @@ const About = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: #eca521;
   }
 `;
 

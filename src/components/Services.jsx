@@ -8,18 +8,18 @@ import SalsaLogoBlack from '../assets/img/icon.svg';
 
 const Container = styled.div`
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   align-content: center;
 
   background-color: #F9F4E8;
 
-  height: 600px;
+  // height: 600px;
 
   @media (max-width: ${medium}) {
     flex-direction: column;
-    height: 850px;
+    // height: 850px;
     justify-content: flex-start;
   }
 
@@ -27,7 +27,6 @@ const Container = styled.div`
 
 const Header = styled.h1`
   width: 200px;
-  // height: 420px;
   margin: 40px;
   text-align: center;
   font-family: SourceSansPro;
